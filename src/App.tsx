@@ -17,9 +17,9 @@ import {
   Routes,
 } from "react-router-dom";
 import logo from './logo.svg';
-import Navbar from "./Components/Navbar";
-import Footbar from "./Components/Footbar";
-import WelcomePage from "./Pages/WelcomePage";
+import Navbar from "./Sections/Navbar";
+import Footbar from "./Sections/Footbar";
+import Home from "./Pages/Home";
 
 export const App = () => (
   <>
@@ -28,7 +28,7 @@ export const App = () => (
         <Routes>
           <Route path="/" element={<Navigate replace to={"/Welcome"} />} />
           {/* <Route path="/" element={<Dashboard />} /> */}
-          <Route path="/Welcome" element={<WelcomePage />} />
+          <Route path="/Welcome" element={<Home />} />
           
         </Routes>
       </Frame>
@@ -68,7 +68,7 @@ function Frame({ children }: FrameProps) {
         <Navbar screen={screenSize} layoutSize={layoutSize} />
         <Container
           maxW={screenSize}
-          mb={["5rem", "5rem", "5rem", "5rem"]}
+          mb={["5rem", "5rem", "5rem", "0rem"]}
           px={["0rem", "0rem", "0rem", "0rem"]}
         >
           <Box minH={"lg"} mx={layoutSize}>

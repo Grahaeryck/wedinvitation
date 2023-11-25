@@ -40,7 +40,7 @@ type Props = {
           >
             {/* <Flex bg="#F9F6EE" justify="center" > */}
             <Flex justify="center">
-              <Text m="10px">Sandy & Graha 2024 | Designed by Poipoi</Text>
+              <Text m="10px">Sandy & Graha 2024 | Designed by Tama</Text>
             </Flex>
           </Container>
         </Box>

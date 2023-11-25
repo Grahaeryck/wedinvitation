@@ -20,22 +20,32 @@ import {
   Text,
   theme,
 } from "@chakra-ui/react";
-import Footbar from "../Components/Footbar";
+import Footbar from "../Sections/Footbar";
 //import { FaBackward, FaUserCircle } from "react-icons/fa";
 //import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import Attendance from "../Components/Attendance"
+import Banner from "../Sections/Banner";
+import Doa from "../Sections/Doa";
+import GroomBride from "../Sections/GroomBride";
+import Events from "../Sections/Events";
+import Attendance from "../Sections/Attendance";
+
+
 
 type Props = {};
 function WelcomePage({}: Props) {
 
     useEffect(() => {
-        document.title = "Wedding of Sandy & Graha";
+        document.title = "Sandy & Graha | #HAtiuntukberSANDar";
       }, []);
 
     return (
         <>
-        <Attendance></Attendance>
+            <Banner/>
+            <Doa/>
+            <GroomBride/>
+            <Events/>
+            <Attendance/>
         </>
     );
 
