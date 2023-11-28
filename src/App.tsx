@@ -27,9 +27,7 @@ export const App = () => (
       <Frame>
         <Routes>
           <Route path="/" element={<Navigate replace to={"/Welcome"} />} />
-          {/* <Route path="/" element={<Dashboard />} /> */}
           <Route path="/Welcome" element={<Home />} />
-          
         </Routes>
       </Frame>
     </Router>

@@ -1,35 +1,10 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   Heading,
-  // Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
   Stack,
-  Image,
-  Container,
-  Divider,
-  Input,
-  Select,
-  Text,
-  theme,
-  Grid,
-  GridItem,
-  AbsoluteCenter,
-  Spacer
+  Text
 } from "@chakra-ui/react";
-import  Logo180 from "../Asset/Logo180.png";
-import Logo48 from "../Asset/Logo48.png";
 
 type Props = {};
 function Doa({}: Props) {
@@ -61,7 +36,7 @@ function Doa({}: Props) {
 
                             <Box width={{ base: '80%px', md: '60%px' , lg: "50%"}} my={'1rem'} px={'20px'} >
                                 <Flex justify="center" align="center">
-                                    <Text fontSize={{ base: '12px', md: '16px' , lg: '18px'}} as="i" color={"#483C32"}>
+                                    <Text fontSize={{ base: '12px', md: '16px' , lg: '18px'}} as="i" color={"#483C32"} align="center">
                                         Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, 
                                         agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. 
                                         Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.

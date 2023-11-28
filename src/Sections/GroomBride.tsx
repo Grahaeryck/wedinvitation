@@ -2,31 +2,12 @@ import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   Heading,
-  // Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
   Stack,
   Image,
-  Container,
   Divider,
-  Input,
-  Select,
   Text,
-  theme,
-  Grid,
-  GridItem,
-  AbsoluteCenter,
-  Spacer
+  AbsoluteCenter
 } from "@chakra-ui/react";
 import  Logo180 from "../Asset/Logo180.png";
 import Logo48 from "../Asset/Logo48.png";
@@ -48,8 +29,8 @@ function GroomBride({}: Props) {
             >
                 <Stack mt="6rem" mb="6rem">
                     <Stack align={'center'}>
-                        <Text fontSize={'20px'} as="i" color={"#483C32"}>Kedua Mempelai</Text>
-                        <Heading fontSize={'50px'} as="i" color={"#C19A6B"}>Groom & Bride</Heading>
+                        <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>Kedua Mempelai</Text>
+                        <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Groom & Bride</Heading>
                     </Stack>
                     <Stack width={'100%'}>
                         <Box width={[

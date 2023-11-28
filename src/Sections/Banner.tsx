@@ -1,28 +1,9 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   Heading,
-  // Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
   Stack,
-  Image,
-  Container,
-  Divider,
-  Input,
-  Select,
-  Text,
-  theme,
+  Text
 } from "@chakra-ui/react";
 import bgIMG from "../Asset/Banner.jpeg"
 
@@ -48,8 +29,8 @@ function Banner({}: Props) {
                 h={'inherit'}
             >
                 <Stack align={'center'}>
-                    <Heading fontSize={'50px'} as="i" color={"#f9f6ee"}>Sandy & Graha</Heading>
-                    <Text fontSize={'20px'} as="p" color={"#f9f6ee"}>February 24, 2024 | Malang, Indonesia</Text>
+                    <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="h1" color={"#f9f6ee"}>Sandy & Graha</Heading>
+                    <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#f9f6ee"}>February 24, 2024 | Malang, Indonesia</Text>
                 </Stack>
             </Flex>
         </Box>

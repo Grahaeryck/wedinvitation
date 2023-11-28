@@ -28,6 +28,9 @@ import Banner from "../Sections/Banner";
 import Doa from "../Sections/Doa";
 import GroomBride from "../Sections/GroomBride";
 import Events from "../Sections/Events";
+import Story from "../Sections/Story";
+import Gallery from "../Sections/Gallery";
+import Gift from "../Sections/Gift";
 import Attendance from "../Sections/Attendance";
 
 
@@ -45,6 +48,9 @@ function WelcomePage({}: Props) {
             <Doa/>
             <GroomBride/>
             <Events/>
+            <Story/>
+            <Gallery/>
+            <Gift/>
             <Attendance/>
         </>
     );

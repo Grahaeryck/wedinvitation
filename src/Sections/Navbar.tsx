@@ -1,27 +1,10 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Heading,
   Spacer,
-  Avatar,
   HStack,
-  Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
   Image,
   Container,
-  Divider,
-  Text,
-  theme,
 } from "@chakra-ui/react";
 import Logo48 from "../Asset/Logo48.png";
 

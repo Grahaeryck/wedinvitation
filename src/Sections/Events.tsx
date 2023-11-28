@@ -1,28 +1,12 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   Heading,
-  // Link,
-  IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
   Stack,
   Image,
-  Container,
   Divider,
-  Input,
-  Select,
   Text,
-  theme,
   Grid,
   GridItem,
   SimpleGrid,
@@ -30,7 +14,7 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Icon
+  Link
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faMap, faCalendarDays, faClock} from '@fortawesome/free-solid-svg-icons';
@@ -63,8 +47,8 @@ function Events({}: Props) {
             >
                 <Stack mt="6rem" mb="6rem" justify={'center'} align={'center'}>
                     <Stack align={'center'}>
-                        <Text fontSize={'20px'} as="i" color={"#FAF9F6"}>Rangkaian Acara</Text>
-                        <Heading fontSize={'50px'} as="i" color={"#FAF9F6"}>Wedding Event</Heading>
+                        <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#FAF9F6"}>Rangkaian Acara</Text>
+                        <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#FAF9F6"}>Wedding Event</Heading>
                     </Stack>
 
                     <Grid
@@ -125,20 +109,26 @@ function Events({}: Props) {
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Jl. Simpang Ijen No.2, Kec. Klojen  </Text>
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Kota Malang, Jawa Timur 65119 </Text>
                                                     <Box height='wrap' width={'wrap'} mt={'30px'}>
-                                                        <Button
-                                                          size='md'
-                                                          height='48px'
-                                                          width='180px'
-                                                          border='2px'
-                                                          color='#C19A6B'
-                                                          bgColor='#F9F6EE'
-                                                          borderColor='#C19A6B'
-                                                          borderRadius='20px'
-                                                          _hover={{ bgColor:'#483C32'}}
-                                                          leftIcon={<FontAwesomeIcon icon={faRoute} size="lg" style={{color: "#C19A6B",}}/>}
+                                                        
+                                                        <Link 
+                                                            href='https://bit.ly/SG-Maps' 
+                                                            isExternal
                                                         >
-                                                            Get Direction
-                                                        </Button>
+                                                            <Button
+                                                              size='md'
+                                                              height='48px'
+                                                              width='180px'
+                                                              border='2px'
+                                                              color='#C19A6B'
+                                                              bgColor='#F9F6EE'
+                                                              borderColor='#C19A6B'
+                                                              borderRadius='20px'
+                                                              _hover={{ bgColor:'#483C32'}}
+                                                              leftIcon={<FontAwesomeIcon icon={faRoute} size="lg" style={{color: "#C19A6B",}}/>}
+                                                            >
+                                                                Get Direction
+                                                            </Button>
+                                                        </Link>
                                                     </Box>
                                                 </Flex>
                                             </Stack>
@@ -200,20 +190,25 @@ function Events({}: Props) {
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Jl. Simpang Ijen No.2, Kec. Klojen  </Text>
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Kota Malang, Jawa Timur 65119 </Text>
                                                     <Box height='wrap' width={'wrap'} mt={'30px'}>
-                                                    <Button
-                                                          size='md'
-                                                          height='48px'
-                                                          width='180px'
-                                                          border='2px'
-                                                          color='#C19A6B'
-                                                          bgColor='#F9F6EE'
-                                                          borderColor='#C19A6B'
-                                                          borderRadius='20px'
-                                                          _hover={{ bgColor:'#483C32'}}
-                                                          leftIcon={<FontAwesomeIcon icon={faRoute} size="lg" style={{color: "#C19A6B",}}/>}
+                                                        <Link 
+                                                            href='https://bit.ly/SG-Maps' 
+                                                            isExternal
                                                         >
-                                                            Get Direction
-                                                        </Button>
+                                                            <Button
+                                                              size='md'
+                                                              height='48px'
+                                                              width='180px'
+                                                              border='2px'
+                                                              color='#C19A6B'
+                                                              bgColor='#F9F6EE'
+                                                              borderColor='#C19A6B'
+                                                              borderRadius='20px'
+                                                              _hover={{ bgColor:'#483C32'}}
+                                                              leftIcon={<FontAwesomeIcon icon={faRoute} size="lg" style={{color: "#C19A6B",}}/>}
+                                                            >
+                                                                Get Direction
+                                                            </Button>
+                                                        </Link>
                                                     </Box>
                                                 </Flex>
                                             </Flex>

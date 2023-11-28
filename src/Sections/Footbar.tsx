@@ -2,25 +2,8 @@ import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
-  Heading,
-  // Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  Image,
   Container,
-  Divider,
-  Text,
-  theme,
+  Text
 } from "@chakra-ui/react";
 
 type Props = {
@@ -40,7 +23,7 @@ type Props = {
           >
             {/* <Flex bg="#F9F6EE" justify="center" > */}
             <Flex justify="center">
-              <Text m="10px">Sandy & Graha 2024 | Designed by Tama</Text>
+              <Text m="10px" color={'#483C32'}>Sandy & Graha 2024 | #HAtiuntukberSANDar</Text>
             </Flex>
           </Container>
         </Box>

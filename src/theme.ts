@@ -10,9 +10,9 @@ export const config: ThemeConfig = {
 export const Theme = extendTheme({
   config,
   fonts: {
-    heading: "Roboto, Arial, sans-serif",
+    heading: `Sacramento`,
     // body: "Roboto, sans-serif",
-    body: `Roboto,Cordia New,"Microsoft Sans Serif",Utsaah,Devanagari MT,Nirmala UI,Latha,InaiMathi,Gautami,Telugu Sangam MN,Tunga,Kannada Sangam MN,Kartika,Malayalam Sangam MN,Shruti,Gujarati MT,Gujarati Sangam MN,Vrinda,Bangla Sangam MN,Meiryo UI Reg,メイリオ Reg,MS UI Gothic Reg,Hiragino Kaku Gothic Reg,ヒラギノ角ゴ Pro W3 Reg,Microsoft YaHei,微软雅黑,Hiragino Sans GB,Microsoft JhengHei,微軟正黑體,Malgun Gothic,맑은 고딕,Gulim,AppleGothic,Apple LiGothic,LiHei Pro,Osaka,STHeiti,华文黑体,STXihei,华文细黑,SimHei,黑体,Arial Unicode MS,Arial,sans-serif`
+    body: `'Ephesis', serif`
   },
   colors: {
     black: "#000000",
