@@ -1,3 +1,5 @@
+import { ReactNode, useState, useMemo, useEffect} from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -8,20 +10,45 @@ import {
 } from "@chakra-ui/react";
 import Logo48 from "../Asset/Logo48.png";
 
+
 type Props = {
     screen: string | undefined;
     layoutSize: string | undefined;
   };
   
-  const PageLinks = [
-    "Dashboard",
-    "New Request",
-    "Existing Request",
-    "Admin",
-    "FAQ",
-  ];
+  const activePage = {
+    //fontWeight: "500",
+    color: '#F9F6EE',
+    //backgroundColor: bgColor,
+    padding:"10px",
+    //borderRadius: "1px",
+    textDecoration: "none",
+    // borderBottom: '0.2em solid #0672cb',
+  };
+
 
   function Navbar({ screen, layoutSize }: Props) {
+    const Pages = useMemo(
+      () => [
+        {
+          path: "/cover",
+          text: "Cover",
+        },
+        {
+          path: "/Home",
+          text: "Home",
+        },
+        {
+          path: "/Event",
+          text: "Event",
+        },
+        {
+          path: "/Galery",
+          text: "Galery",
+        },
+      ],
+      []
+    );
 
     return (
         <>
@@ -31,15 +58,28 @@ type Props = {
             px={["2rem", "2rem", "2rem", "2rem"]}
             position={"absolute"}
           >
+            
             <Flex as="nav" p={{base: "6px", md: "8px" , lg: "10px"}} alignItems="center">
               <Image boxSize={{base: "25px", sm:"35", md: "45px" , lg: "50px"}} src={Logo48} alt='SG' />
               <Spacer></Spacer>
 
-              <HStack spacing={{base: "5px", md: "15px" , lg: "25px"}}>
-                <Box p="10px" color={'#483C32'}>Home</Box>
-                <Box p="10px" color={'#483C32'}>Event</Box>
-                <Box p="10px" color={'#483C32'}>Story</Box>
-                <Box p="10px" color={'#483C32'}>Galery</Box>
+              <HStack spacing={{base: "5px", md: "15px" , lg: "25px"}} align={'center'}>
+                {Pages.map((data, index) => {
+                    return (
+                      <Box
+                        p="10px" 
+                        color={'#483C32'}
+                        fontSize={'20px'}
+                        key={index}
+                        as={NavLink}
+                        to={data.path}
+                        _activeLink={activePage}
+                        // mt={5}
+                      >
+                        {data.text}
+                      </Box>
+                    );
+                  })}
               </HStack>
             </Flex>
           </Container>

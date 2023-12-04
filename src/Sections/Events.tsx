@@ -14,7 +14,8 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Link
+  Link,
+  AspectRatio
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faMap, faCalendarDays, faClock} from '@fortawesome/free-solid-svg-icons';
@@ -221,6 +222,16 @@ function Events({}: Props) {
                             </Box>
                         </GridItem>
                     </Grid>
+
+                    <Flex justify={'center'} align={'center'} mt={'2rem'}>
+                        <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9} border={'3px'} borderColor={'#C19A6B'}>
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Gedung Bakorwil Malang&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                                title="Sandy & Graha" 
+                                allowFullScreen
+                            />
+                        </AspectRatio>
+                    </Flex>
                 </Stack>
             </Flex>
         </Box>

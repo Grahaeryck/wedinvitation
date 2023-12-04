@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Theme } from "./theme";
+import BackgroundMusic from "./Components/BackgroundMusic";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,6 +14,7 @@ root.render(
     <ChakraProvider theme={Theme}>
       <ColorModeScript initialColorMode={Theme.config.initialColorMode} />
       <App />
+      <BackgroundMusic/>
     </ChakraProvider>
   </React.StrictMode>
 );

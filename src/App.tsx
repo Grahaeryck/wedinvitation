@@ -16,18 +16,22 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import logo from './logo.svg';
 import Navbar from "./Sections/Navbar";
 import Footbar from "./Sections/Footbar";
 import Home from "./Pages/Home";
+import LandingWvideo from "./Pages/LandingWvideo";
+import LandingWimg from "./Pages/LandingWimg";
 
 export const App = () => (
   <>
     <Router>
       <Frame>
         <Routes>
-          <Route path="/" element={<Navigate replace to={"/Welcome"} />} />
-          <Route path="/Welcome" element={<Home />} />
+          <Route path="/" element={<Navigate replace to={"/cover"} />} />
+          <Route path="/cover" element={<LandingWimg />} />
+          {/* <Route path="/intro" element={<LandingWvideo />} /> */}
+          <Route path="/Home" element={<Home />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </Frame>
     </Router>

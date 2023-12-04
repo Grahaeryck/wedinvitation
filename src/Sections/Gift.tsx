@@ -91,7 +91,7 @@ function Gift({}: Props) {
                                       <GridItem colSpan={{ base: 3, md: 1 , lg: 1 }}>
                                         <Flex direction={'column'} justify={'center'} align={'center'} h={{ base: "wrap", md: "100px" , lg: "150px" }}>
                                             <Image
-                                              w={'120px'}
+                                              w={'130px'}
                                               h={{ base: "40px", md: "100px" , lg: "120px" }}
                                               fit={{ base: "cover", md: "contain" , lg: "contain" }}
                                               bgPosition={'center'}

@@ -7,9 +7,9 @@ import {
   Image,
   Divider,
   Text,
-  AbsoluteCenter,
   Grid,
-  GridItem
+  GridItem,
+  AspectRatio
 } from "@chakra-ui/react";
 import  Logo180 from "../Asset/Logo180.png";
 import Logo48 from "../Asset/Logo48.png";
@@ -37,36 +37,46 @@ function Gallery({}: Props) {
                         <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Wedding Gallery</Heading>
                     </Stack>
 
-                    <Flex width={{ base: "80%", md: "90%" , lg: "100%" }} justify={'center'} align={'center'}>
-                    <Grid
-                      templateColumns='repeat(6, 1fr)'
-                      gap={'2rem'}
-                      mt={'20px'}
-                    >
-                        <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <GaleryCard/>
-                        </GridItem>
-
-                        <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <GaleryCard/>
-                        </GridItem>
-
-                        <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <GaleryCard/>
-                        </GridItem>
-
-                        <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <GaleryCard/>
-                        </GridItem>
-
-                        <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <GaleryCard/>
-                        </GridItem>
-
-                        <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <GaleryCard/>
-                        </GridItem>
-                    </Grid>
+                    <Flex justify={'center'} align={'center'}>
+                        <Grid
+                          templateColumns='repeat(6, 1fr)'
+                          gap={'2rem'}
+                          mt={'20px'}
+                        >
+                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                <GaleryCard/>
+                            </GridItem>
+        
+                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                <GaleryCard/>
+                            </GridItem>
+        
+                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                <GaleryCard/>
+                            </GridItem>
+        
+                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                <GaleryCard/>
+                            </GridItem>
+        
+                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                <GaleryCard/>
+                            </GridItem>
+        
+                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                <GaleryCard/>
+                            </GridItem>
+                        </Grid>
+                        
+                    </Flex>
+                    <Flex justify={'center'} align={'center'} mt={'2rem'}>
+                        <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
+                            <iframe 
+                                src="https://www.youtube.com/embed/wqcu0j3Wsys?si=RcWJIHck1OXAc5-v" 
+                                title="Sandy & Graha" 
+                                allowFullScreen
+                            />
+                        </AspectRatio>
                     </Flex>
                 </Stack>
             </Flex>

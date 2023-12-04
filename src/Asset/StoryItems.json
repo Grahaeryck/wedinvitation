@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "year1" : "2020",
+        "description1" : "Menjadi momen berharga bagi kami. Pada tahun ini tanpa sengaja kami saling mengenal satu sama lain. Berawal dari sebuah kata sapa yang sederhana, ternyata membuat kami menjadi semakin dekat. Namun kami tak menyangka bahwa akan sedekat ini. ",
+        "year2" : "2021",
+        "description2" : "Kami sempat tak saling berhubungan, melanjutkan hidup masing-masing dengan baik, namun tiba-tiba kami kembali dekat, mungkin itu sebuah pertanda? Meskipun pada saat itu kami belum menyadarinya. "
+    },
+
+    {
+        "id" :2,
+        "year1" : "2022",
+        "description1" : "Menjadi awal perjumpaan kami, yang awalnya jauh akhirnya berjumpa secara langsung. Tanpa kata canggung, perjumpaan tersebut justru terasa seperti reuni dengan kawan lama.",
+        "year2" : "Nov22",
+        "description2" : "Hingga di awal bulan November, Graha merasa nyaman dan ingin menjalin sebuah hubungan. Namun saat itu ia masih bimbang, ntah bagaimana cara untuk mengungkapkan isi hatinya dan ia memilih untuk memendamnya terlebih dahulu. Di sisi lain, Sandy belum menyadari hal tersebut."
+    }
+]
