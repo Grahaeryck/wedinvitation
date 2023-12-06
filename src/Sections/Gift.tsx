@@ -49,7 +49,7 @@ function Gift({}: Props) {
                                 color={"#483C32"} 
                                 align={'center'}
                             >
-                                Kehadiran dan support anda di hari spesial kami adalah hadiah terbaik bagi kami. 
+                                Kehadiran dan doa restu anda di hari spesial kami adalah hadiah terbaik bagi kami. 
                                 Namun, apabila anda ingin merayakan dengan hadiah. Mohon cek details dibawah ini, Terima Kasih.
                             </Text>
                         </Flex>

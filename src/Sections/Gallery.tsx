@@ -69,13 +69,24 @@ function Gallery({}: Props) {
                         </Grid>
                         
                     </Flex>
-                    <Flex justify={'center'} align={'center'} mt={'2rem'}>
+                    <Flex justify={'center'} align={'center'} mt={'2rem'} direction={'column'}>
                         <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
                             <iframe 
                                 src="https://www.youtube.com/embed/wqcu0j3Wsys?si=RcWJIHck1OXAc5-v" 
                                 title="Sandy & Graha" 
                                 allowFullScreen
                             />
+                        </AspectRatio>
+
+                        <AspectRatio mt='2rem' height="152px" width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
+                        <iframe 
+                            src="https://open.spotify.com/embed/playlist/5zVA9wRgKt20ReAApBFRmH?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="100%" 
+                            frameBorder="0" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"
+                        />
                         </AspectRatio>
                     </Flex>
                 </Stack>

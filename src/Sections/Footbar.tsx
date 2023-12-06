@@ -3,7 +3,8 @@ import {
   Box,
   Flex,
   Container,
-  Text
+  Text,
+  Link
 } from "@chakra-ui/react";
 
 type Props = {
@@ -22,8 +23,16 @@ type Props = {
             px={["0rem", "4rem", "4rem", "0rem"]}
           >
             {/* <Flex bg="#F9F6EE" justify="center" > */}
-            <Flex justify="center">
-              <Text m="10px" color={'#483C32'}>Sandy & Graha 2024 | #HAtiuntukberSANDar</Text>
+            <Flex justify="center" align={'center'} direction={'column'} m="10px">
+              <Text color={'#483C32'}>Sandy & Graha 2024 | #HAtiuntukberSANDar</Text>
+              {/* <Text href='https://chakra-ui.com' color={'#C19A6B'}>4|12|22</Text> */}
+              <Text>
+                Designed by{' '}
+                <Link href='https://www.linkedin.com/in/grahaeryck' color={'#C19A6B'} fontStyle={'bold'} isExternal>
+                  24|4|61
+                </Link>
+                {' '}Studio
+              </Text>
             </Flex>
           </Container>
         </Box>

@@ -15,11 +15,6 @@ import {
 } from "@chakra-ui/react";
 import TLboxRSide from "../Components/TLboxRSide";
 import TLboxLSide from "../Components/TLboxLSide";
-import Carousel from 'react-material-ui-carousel';
-import CarouselItems from "../Components/StoryCarousel/CarouselItems";
-import StoryCarousel from "../Components/StoryCarousel/StoryCarousel";
-import { truncate } from "fs";
-
 
 type Props = {};
 function Story({}: Props) {
@@ -39,7 +34,7 @@ function Story({}: Props) {
                 py='4rem'
             >
                 <Stack align={'center'}>
-                    <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>HAtiuntukberSANDar</Text>
+                    <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>#HAtiuntukberSANDar</Text>
                     <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Our Story</Heading>
                 </Stack>
             
@@ -49,7 +44,7 @@ function Story({}: Props) {
 
                     <TLboxRSide yearTitle={"2020"} top={true}>
                         <Text align={'center'} fontSize='18px'>
-                            Menjadi momen berharga bagi kami. 
+                            2020 menjadi momen berharga bagi kami. 
                             Pada tahun ini tanpa sengaja kami saling mengenal satu sama lain.
                             Berawal dari sebuah kata sapa yang sederhana, ternyata membuat kami menjadi semakin dekat. 
                             Namun kami tak menyangka bahwa akan sedekat ini. 
@@ -63,7 +58,7 @@ function Story({}: Props) {
                         </Text>
                     </TLboxLSide>
 
-                    <TLboxRSide yearTitle={"June 22"}>
+                    <TLboxRSide yearTitle={"Jun 22"}>
                         <Text align={'center'} fontSize='18px'>
                             Menjadi awal perjumpaan kami, yang awalnya jauh akhirnya berjumpa secara langsung. 
                             Tanpa kata canggung, perjumpaan tersebut justru terasa seperti reuni dengan kawan lama. 
@@ -78,7 +73,7 @@ function Story({}: Props) {
                         </Text>
                     </TLboxLSide>
 
-                    <TLboxRSide yearTitle={"Dec 22"}>
+                    <TLboxRSide yearTitle={"Des 22"}>
                         <Text align={'center'} fontSize='18px'>
                         Tak mampu lagi menahan rasa, di bulan Desember, Graha mengajak untuk berjumpa kembali, ia membulatkan tekad untuk segera menyatakan isi hatinya. 
                         Pada saat itu, Sandy menyetujui ajakannya tanpa tahu apa yang akan terjadi. 
@@ -87,7 +82,7 @@ function Story({}: Props) {
                         </Text>
                     </TLboxRSide>
 
-                    <TLboxLSide yearTitle={"Dec 22"}>
+                    <TLboxLSide yearTitle={"Des 22"}>
                         <Text align={'center'} fontSize='18px'>
                             Dan pada malam itu, 4 Desember 2022, menjadi tanggal yang istimewa bagi kami, 
                             Itulah awal cerita kami.. 

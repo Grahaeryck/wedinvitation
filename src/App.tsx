@@ -1,14 +1,8 @@
 import React from 'react';
 import {
-  ChakraProvider,
   Box,
   Container,
-  Flex,
-  FlexProps,
-  BoxProps,
-  useBreakpointValue,
-  useColorMode,
-  IconButton,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import {
   BrowserRouter as Router,
@@ -30,8 +24,10 @@ export const App = () => (
           <Route path="/" element={<Navigate replace to={"/cover"} />} />
           <Route path="/cover" element={<LandingWimg />} />
           {/* <Route path="/intro" element={<LandingWvideo />} /> */}
-          <Route path="/Home" element={<Home />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/Home" element={<Home language={'id'}/>} />
+          <Route path="/id/Home" element={<Home language={'id'}/>} />
+          <Route path="/eng/Home" element={<Home language={'eng'}/>} />
+          <Route path="*" element={<Home language={'id'}/>} />
         </Routes>
       </Frame>
     </Router>
@@ -70,7 +66,7 @@ function Frame({ children }: FrameProps) {
         <Navbar screen={screenSize} layoutSize={layoutSize} />
         <Container
           maxW={screenSize}
-          mb={["5rem", "5rem", "5rem", "0rem"]}
+          mb={["0rem", "0rem", "0rem", "0rem"]}
           px={["0rem", "0rem", "0rem", "0rem"]}
         >
           <Box minH={"lg"} mx={layoutSize}>

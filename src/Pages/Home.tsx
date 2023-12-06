@@ -1,29 +1,25 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
-import {
-  Box,
-  Flex,
-  Avatar,
-  HStack,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  Image,
-  Container,
-  Divider,
-  Text,
-  theme,
-} from "@chakra-ui/react";
-import Footbar from "../Sections/Footbar";
-//import { FaBackward, FaUserCircle } from "react-icons/fa";
-//import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+// import {
+//   Box,
+//   Flex,
+//   Avatar,
+//   HStack,
+//   IconButton,
+//   Button,
+//   Menu,
+//   MenuButton,
+//   MenuList,
+//   MenuItem,
+//   MenuDivider,
+//   useDisclosure,
+//   useColorModeValue,
+//   Stack,
+//   Image,
+//   Container,
+//   Divider,
+//   Text,
+//   theme,
+// } from "@chakra-ui/react";
 import Banner from "../Sections/Banner";
 import Doa from "../Sections/Doa";
 import GroomBride from "../Sections/GroomBride";
@@ -35,8 +31,10 @@ import Attendance from "../Sections/Attendance";
 
 
 
-type Props = {};
-function WelcomePage({}: Props) {
+type Props = {
+  language: string;
+};
+function WelcomePage({language}: Props) {
 
     useEffect(() => {
         document.title = "Sandy & Graha | #HAtiuntukberSANDar";
@@ -45,8 +43,8 @@ function WelcomePage({}: Props) {
     return (
         <>
             <Banner/>
-            <Doa/>
-            <GroomBride/>
+            <Doa lang={language}/>
+            <GroomBride lang={language}/>
             <Events/>
             <Story/>
             <Gallery/>

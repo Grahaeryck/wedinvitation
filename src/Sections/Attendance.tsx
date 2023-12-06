@@ -31,7 +31,7 @@ function Attendance({}: Props) {
         <>
         <Box 
             maxW={"container.2xl"}
-            h="wrap"
+            h="100vh"
             backgroundImage={AttendanceBG}
             bgAttachment={'fixed'}
             bgSize="cover"
@@ -51,14 +51,14 @@ function Attendance({}: Props) {
                         textColor={"#FAF9F6"}
                         fontSize={{ base: "30px", md: "35x" , lg: "40px" }}
                     >
-                        Are you Attending?
+                        Rsvp
                     </Heading>
                     <Text 
                         textColor={"#F9F6EE"}
                         fontSize={{ base: "18px", md: "20px" , lg: "25px" }}
                         
                     >
-                        Please Fill-up the form to notify us that you're attending. Thanks.</Text>
+                        Mohon untuk dapat mengisi formulir dibawah ini.</Text>
                     
                     <Grid
                       templateColumns='repeat(3, 1fr)'
