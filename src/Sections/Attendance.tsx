@@ -20,11 +20,9 @@ import {
     InfoOutlineIcon
 } from '@chakra-ui/icons';
 import AttendanceBG from "../Asset/AttendanceBG.jpg";
-import GaleryCard from "../Components/GaleryCard";
-import platnomorCroped from "../Asset/platnomorCroped.png";
 
-type Props = {};
-function Attendance({}: Props) {
+type Props = {lang: string;};
+function Attendance({lang}: Props) {
     const [kehadiran, setKehadiran] = useState("");
 
     return (
@@ -33,7 +31,7 @@ function Attendance({}: Props) {
             maxW={"container.2xl"}
             h="100vh"
             backgroundImage={AttendanceBG}
-            bgAttachment={'fixed'}
+            // bgAttachment={'fixed'}
             bgSize="cover"
             bgPosition="center"
             bgRepeat="no-repeat"
@@ -47,18 +45,19 @@ function Attendance({}: Props) {
                     align="center"
                 >
                     <Heading 
-                        as="h1"
+                        as="i"
                         textColor={"#FAF9F6"}
                         fontSize={{ base: "30px", md: "35x" , lg: "40px" }}
                     >
                         Rsvp
                     </Heading>
                     <Text 
+                        as={'i'}
                         textColor={"#F9F6EE"}
                         fontSize={{ base: "18px", md: "20px" , lg: "25px" }}
-                        
                     >
-                        Mohon untuk dapat mengisi formulir dibawah ini.</Text>
+                        {lang == "id" ? ("Mohon untuk dapat mengisi formulir dibawah ini."):("Please fill out the form below.")}
+                    </Text>
                     
                     <Grid
                       templateColumns='repeat(3, 1fr)'
@@ -147,19 +146,16 @@ function Attendance({}: Props) {
                             />
                                 <HStack>
                                     <InfoOutlineIcon boxSize={'10px'} color="#483C32"/>
-                                    <Text fontSize={'10px'} color="#483C32">Please note that your wishes will be displayed on this website</Text>
-                                </HStack>
-
-                                <HStack>
-                                    <InfoOutlineIcon boxSize={'10px'} color="#483C32"/>
-                                    <Text fontSize={'10px'} color="#483C32">Harap dicatat bahwa 'Whishes' Anda akan ditampilkan di situs web ini</Text>
+                                    <Text fontSize={'10px'} color="#483C32">
+                                        {lang == "id" ? ("Harap dicatat bahwa 'Whishes' Anda akan ditampilkan di situs web ini"):("Please note that your wishes will be displayed on this website")}
+                                    </Text>
                                 </HStack>
                             </Stack>
                         </GridItem>
 
                     </Grid>
                     <Button bgColor={"#F9F6EE"} variant='solid' alignItems='center' width='60%'>
-                        Submit / Kirim
+                        {lang == "id" ? ("Kirim"):("Submit")}
                     </Button>
                 </Stack>
             </Flex>

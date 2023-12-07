@@ -2,24 +2,16 @@ import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
-  Heading,
-  Stack,
   Image,
   Divider,
   Text,
-  AbsoluteCenter,
-  Grid,
-  GridItem,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Button,
-  ButtonGroup,
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
@@ -30,8 +22,11 @@ import picSample from "../Asset/tl3.jpg";
 import Banner from '../Asset/Banner.jpeg';
 
 
-type Props = {};
-function GaleryCard({}: Props) {
+type Props = {
+  cardTitle:string|any;
+  cardSrc: string|any;
+};
+function GaleryCard({cardTitle, cardSrc}: Props) {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -43,7 +38,7 @@ function GaleryCard({}: Props) {
                 h={{ base: '220px', md: '280px' , lg: '380px' }}
                 cursor={'pointer'}
                 
-                bgImage={picSample}
+                bgImage={cardSrc}
                 bgSize="cover"
                 bgPosition="center"
                 bgRepeat="no-repeat"
@@ -65,7 +60,7 @@ function GaleryCard({}: Props) {
                                     width={'100%'}
                                     fontSize={{ base: '10px', md: '12px' , lg: '14px' }}
                                 >   
-                                    Cantik Banget Kan
+                                    {cardTitle}
                                 </Text>
                               <Divider border={'2px'} borderColor={'#C19A6B'}/>
                           </Flex>
@@ -84,7 +79,7 @@ function GaleryCard({}: Props) {
                               h={'480px'}
                               w={'854px'}
                               objectFit='cover'
-                              src={Banner}
+                              src={cardSrc}
                               mt='2rem'
                               justifyContent={'center'}
                             />

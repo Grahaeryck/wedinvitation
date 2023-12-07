@@ -42,14 +42,14 @@ function WelcomePage({language}: Props) {
 
     return (
         <>
-            <Banner/>
+            <Banner lang={language}/>
             <Doa lang={language}/>
             <GroomBride lang={language}/>
-            <Events/>
-            <Story/>
+            <Events lang={language}/>
+            <Story lang={language}/>
             <Gallery/>
-            <Gift/>
-            <Attendance/>
+            <Gift lang={language}/>
+            <Attendance lang={language}/>
         </>
     );
 

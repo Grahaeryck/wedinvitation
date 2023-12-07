@@ -23,9 +23,10 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import bgIMG from "../Asset/eventBG.jpg";
 import Frame from "../Asset/Frame.png";
 import Flower2 from "../Asset/Flower2.png";
+import BtnGetDirection from "../Components/BtnGetDirection";
 
-type Props = {};
-function Events({}: Props) {
+type Props = {lang: string;};
+function Events({lang}: Props) {
 
     return (
         <>
@@ -86,10 +87,19 @@ function Events({}: Props) {
                                                     <Box height='wrap' minW="100px">
                                                         <Flex justify='center' alignItems='center' direction={'column'}>
                                                             <Box height='wrap' width={'wrap'} mb={'10px'}>
-                                                                <FontAwesomeIcon icon={faCalendarDays} beat size="lg" style={{color: "#F9F6EE",}}/>
+                                                                <FontAwesomeIcon icon={faCalendarDays} size="lg" style={{color: "#F9F6EE",}}/>
                                                             </Box>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> Sabtu 24 </Text>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> Februari 2024 </Text>
+                                                            {lang == "id" ? (
+                                                                <>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Sabtu 24 </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Februari 2024 </Text>
+                                                                </>
+                                                            ):(
+                                                                <>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Saturday 24 </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> February 2024 </Text>
+                                                                </>
+                                                            )}
                                                         </Flex>
                                                     </Box>
                                                     <Box height='wrap' minW="100px">
@@ -97,8 +107,18 @@ function Events({}: Props) {
                                                             <Box height='wrap' width={'wrap'} mb={'10px'}>
                                                                 <FontAwesomeIcon icon={faClock} beat size="lg" style={{color: "#F9F6EE",}}/>
                                                             </Box>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> 15:00 WIB </Text>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> 16:30 WIB </Text>
+                                                            {lang == "id" ? (
+                                                                <>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Mulai: 15:00 </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Selesai: 16:30 </Text>
+                                                                </>
+                                                            ):(
+                                                                <>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Start: 15:00 </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> End: 16:30 </Text>
+                                                                </>
+                                                            )}
+                                                            
                                                         </Flex>
                                                     </Box>
                                                 </SimpleGrid>
@@ -109,28 +129,9 @@ function Events({}: Props) {
                                                     <Text fontSize='18px' color={"#FAF9F6"}>Gedung Serba Guna Bakorwil III</Text>
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Jl. Simpang Ijen No.2, Kec. Klojen  </Text>
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Kota Malang, Jawa Timur 65119 </Text>
-                                                    <Box height='wrap' width={'wrap'} mt={'30px'}>
-                                                        
-                                                        <Link 
-                                                            href='https://bit.ly/SG-Maps' 
-                                                            isExternal
-                                                        >
-                                                            <Button
-                                                              size='md'
-                                                              height='48px'
-                                                              width='180px'
-                                                              border='2px'
-                                                              color='#C19A6B'
-                                                              bgColor='#F9F6EE'
-                                                              borderColor='#C19A6B'
-                                                              borderRadius='20px'
-                                                              _hover={{ bgColor:'#483C32'}}
-                                                              leftIcon={<FontAwesomeIcon icon={faRoute} size="lg" style={{color: "#C19A6B",}}/>}
-                                                            >
-                                                                Get Direction
-                                                            </Button>
-                                                        </Link>
-                                                    </Box>
+                                                    <BtnGetDirection>
+                                                        {lang == "id" ? ('Buka Peta'):('Get Direction')}
+                                                    </BtnGetDirection>
                                                 </Flex>
                                             </Stack>
                                         </Flex>
@@ -164,8 +165,11 @@ function Events({}: Props) {
                                     <CardBody>
                                         <Stack>
                                             <Flex justify={'center'} alignItems='center' direction={'column'}>
-                                                <Text fontSize='20px' color={"#FAF9F6"}> Sabtu, 24 Februari 2024 </Text>
-
+                                                {lang == "id" ? (
+                                                    <Text fontSize='20px' color={"#FAF9F6"}> Sabtu. 24 Februari 2024 </Text>
+                                                ):(
+                                                    <Text fontSize='20px' color={"#FAF9F6"}> Saturday. February 24, 2024 </Text>
+                                                )}
                                                 <Box mt={'5px'}>
                                                 <Flex justify='center' alignItems='center' flexWrap='wrap' gap='4rem'>
                                                     <Box height='wrap'>
@@ -177,7 +181,7 @@ function Events({}: Props) {
                                                     <Box height='wrap'>
                                                         <Flex justify='center' alignItems='center' direction={'column'}>
                                                             <Text fontSize='18px' color={"#FAF9F6"}> 18:00 - 19:30</Text>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> 19:30 - 20:00 </Text>
+                                                            <Text fontSize='18px' color={"#FAF9F6"}> 19:30 - 21:00 </Text>
                                                         </Flex>
                                                     </Box>
                                                 </Flex>
@@ -190,27 +194,10 @@ function Events({}: Props) {
                                                     <Text fontSize='18px' color={"#FAF9F6"}>Gedung Serba Guna Bakorwil III</Text>
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Jl. Simpang Ijen No.2, Kec. Klojen  </Text>
                                                     <Text fontSize='15px' color={"#FAF9F6"}> Kota Malang, Jawa Timur 65119 </Text>
-                                                    <Box height='wrap' width={'wrap'} mt={'30px'}>
-                                                        <Link 
-                                                            href='https://bit.ly/SG-Maps' 
-                                                            isExternal
-                                                        >
-                                                            <Button
-                                                              size='md'
-                                                              height='48px'
-                                                              width='180px'
-                                                              border='2px'
-                                                              color='#C19A6B'
-                                                              bgColor='#F9F6EE'
-                                                              borderColor='#C19A6B'
-                                                              borderRadius='20px'
-                                                              _hover={{ bgColor:'#483C32'}}
-                                                              leftIcon={<FontAwesomeIcon icon={faRoute} size="lg" style={{color: "#C19A6B",}}/>}
-                                                            >
-                                                                Get Direction
-                                                            </Button>
-                                                        </Link>
-                                                    </Box>
+                                                    <BtnGetDirection>
+                                                        {lang == "id" ? ('Buka Peta'):('Get Direction')}
+                                                    </BtnGetDirection>
+                                                    
                                                 </Flex>
                                             </Flex>
                                         </Stack>

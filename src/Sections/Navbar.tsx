@@ -60,16 +60,16 @@ type Props = {
           >
             
             <Flex as="nav" p={{base: "6px", md: "8px" , lg: "10px"}} alignItems="center">
-              <Image boxSize={{base: "25px", sm:"35", md: "45px" , lg: "50px"}} src={Logo48} alt='SG' />
+              <Image boxSize={{base: "20px", sm:"30", md: "40px" , lg: "50px"}} src={Logo48} alt='SG' />
               <Spacer></Spacer>
 
-              <HStack spacing={{base: "5px", md: "15px" , lg: "25px"}} align={'center'}>
+              <HStack spacing={{base: "3px", md: "10px" , lg: "15px"}} align={'center'}>
                 {Pages.map((data, index) => {
                     return (
                       <Box
-                        p="10px" 
+                        p="5px" 
                         color={'#483C32'}
-                        fontSize={'20px'}
+                        fontSize={{base: "12px", md: "15px" , lg: "20px"}}
                         key={index}
                         as={NavLink}
                         to={data.path}

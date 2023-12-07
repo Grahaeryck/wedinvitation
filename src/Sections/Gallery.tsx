@@ -1,19 +1,16 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
+//import { ReactNode, useState, useMemo, useEffect } from "react";
 import {
   Box,
   Flex,
   Heading,
   Stack,
-  Image,
-  Divider,
   Text,
   Grid,
   GridItem,
   AspectRatio
 } from "@chakra-ui/react";
-import  Logo180 from "../Asset/Logo180.png";
-import Logo48 from "../Asset/Logo48.png";
 import GaleryCard from "../Components/GaleryCard";
+import GalleryData from "../Data/GalleryData.json";
 
 
 type Props = {};
@@ -43,29 +40,11 @@ function Gallery({}: Props) {
                           gap={'2rem'}
                           mt={'20px'}
                         >
-                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                                <GaleryCard/>
-                            </GridItem>
-        
-                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                                <GaleryCard/>
-                            </GridItem>
-        
-                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                                <GaleryCard/>
-                            </GridItem>
-        
-                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                                <GaleryCard/>
-                            </GridItem>
-        
-                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                                <GaleryCard/>
-                            </GridItem>
-        
-                            <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                                <GaleryCard/>
-                            </GridItem>
+                            {GalleryData.map((item: any, index: number) => (
+                                <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
+                                    <GaleryCard cardTitle={item.title} cardSrc={item.imgSource}/>
+                                </GridItem>
+                            ))}
                         </Grid>
                         
                     </Flex>
