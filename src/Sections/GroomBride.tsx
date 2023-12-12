@@ -87,23 +87,6 @@ function GroomBride({lang}: Props) {
                                 )}
                             </Stack>
                         </Box>
-
-                        
-
-                        {/* <Grid mt="2rem" templateColumns='repeat(4, 1fr)' gap={6}>
-                          <GridItem colSpan={2} w='100%'>
-                            <Stack justify="center" align="left">
-                                <Divider borderColor={'#C19A6B'} orientation='horizontal'/>
-                            </Stack>
-                          </GridItem>
-
-                          <GridItem colSpan={2} w='100%'>
-                            <Stack justify="center" align="end">
-                              <Heading fontSize={'20px'} as="h2" color={"#C19A6B"}>R. Muhammad Graha Eryck Pratama</Heading>
-                              <Text fontSize={'18px'} color={"#483C32"}>Putra pertama dari Bapak R. Ahmad Yani & Ibu Etin Jumarilli Amanar </Text>
-                            </Stack>
-                          </GridItem>
-                        </Grid> */}
                     </Stack>
                 </Stack>
             </Flex>

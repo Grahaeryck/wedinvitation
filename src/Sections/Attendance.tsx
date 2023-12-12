@@ -19,7 +19,7 @@ import {
 import { 
     InfoOutlineIcon
 } from '@chakra-ui/icons';
-import AttendanceBG from "../Asset/AttendanceBG.jpg";
+import AttendanceBG from "../Asset/DSC00481.jpg";
 
 type Props = {lang: string;};
 function Attendance({lang}: Props) {
@@ -32,8 +32,8 @@ function Attendance({lang}: Props) {
             h="100vh"
             backgroundImage={AttendanceBG}
             // bgAttachment={'fixed'}
-            bgSize="cover"
-            bgPosition="center"
+            bgSize={'cover'}
+            bgPosition="38%"
             bgRepeat="no-repeat"
         >
             <Flex justify="center" bgColor={'rgba(72, 60, 50, 0.2)'}>

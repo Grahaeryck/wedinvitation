@@ -174,8 +174,18 @@ function Events({lang}: Props) {
                                                 <Flex justify='center' alignItems='center' flexWrap='wrap' gap='4rem'>
                                                     <Box height='wrap'>
                                                         <Flex justify='center' alignItems='center' direction={'column'}>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> Sesi I </Text>
-                                                            <Text fontSize='18px' color={"#FAF9F6"}> Sesi II </Text>
+                                                            {lang == "id" ? (
+                                                                <>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Sesi I </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Sesi II </Text>
+                                                                </>
+                                                            ):(
+                                                                <>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Session I </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Session II </Text>
+                                                                </>
+                                                            )}
+                                                            
                                                         </Flex>
                                                     </Box>
                                                     <Box height='wrap'>

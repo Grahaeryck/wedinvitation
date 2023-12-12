@@ -27,6 +27,7 @@ import Events from "../Sections/Events";
 import Story from "../Sections/Story";
 import Gallery from "../Sections/Gallery";
 import Gift from "../Sections/Gift";
+import Wishes from "../Sections/Wishes";
 import Attendance from "../Sections/Attendance";
 
 
@@ -49,6 +50,7 @@ function WelcomePage({language}: Props) {
             <Story lang={language}/>
             <Gallery/>
             <Gift lang={language}/>
+            <Wishes lang={language}/>
             <Attendance lang={language}/>
         </>
     );
