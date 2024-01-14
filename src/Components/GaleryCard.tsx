@@ -76,12 +76,13 @@ function GaleryCard({cardTitle, cardSrc}: Props) {
                     <ModalBody >
                         <Flex direction={'column'} justify={'center'} align={'center'}>
                             <Image
-                              h={'480px'}
-                              w={'854px'}
+                              maxH={'100vh'}
+                              //w={'854px'}
                               objectFit='cover'
                               src={cardSrc}
                               mt='2rem'
                               justifyContent={'center'}
+                              alignContent={'center'}
                             />
                         </Flex>
                     </ModalBody>

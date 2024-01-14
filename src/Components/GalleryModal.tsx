@@ -37,8 +37,9 @@ type Props = {
                     <ModalBody >
                         <Flex direction={'column'} justify={'center'} align={'center'}>
                             <Image
-                              h={'480px'}
-                              w={'854px'}
+                              boxSize='200px'
+                              //h={'480px'}
+                              //w={'854px'}
                               objectFit='cover'
                               src={Banner}
                               mt='2rem'

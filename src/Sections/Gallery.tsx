@@ -19,7 +19,7 @@ function Gallery({}: Props) {
     return (
         <>
         <Box 
-            maxW={"container.xl"}
+            maxW={"container.2xl"}
             h="wrap"
             bg={"#FAF9F6"}
         >

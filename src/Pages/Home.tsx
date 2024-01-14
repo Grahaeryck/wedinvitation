@@ -1,25 +1,5 @@
-import { useEffect } from "react";
-// import {
-//   Box,
-//   Flex,
-//   Avatar,
-//   HStack,
-//   IconButton,
-//   Button,
-//   Menu,
-//   MenuButton,
-//   MenuList,
-//   MenuItem,
-//   MenuDivider,
-//   useDisclosure,
-//   useColorModeValue,
-//   Stack,
-//   Image,
-//   Container,
-//   Divider,
-//   Text,
-//   theme,
-// } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import {useLocation} from "react-router-dom";
 import Banner from "../Sections/Banner";
 import Doa from "../Sections/Doa";
 import GroomBride from "../Sections/GroomBride";
@@ -36,6 +16,8 @@ type Props = {
   language: string;
 };
 function WelcomePage({language}: Props) {
+   const location = useLocation();
+   const invitationType = location.state.invType;
 
     useEffect(() => {
         document.title = "Sandy & Graha | #HAtiuntukberSANDar";
@@ -47,7 +29,7 @@ function WelcomePage({language}: Props) {
             <Doa lang={language}/>
             <GroomBride lang={language}/>
             <Events lang={language}/>
-            <Story lang={language}/>
+            {invitationType == "ab" ? (''):(invitationType=="AB" ? (''):(<Story lang={language}/>))}
             <Gallery/>
             <Gift lang={language}/>
             <Wishes lang={language}/>

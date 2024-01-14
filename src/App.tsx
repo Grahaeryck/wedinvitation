@@ -13,7 +13,7 @@ import {
 import Navbar from "./Sections/Navbar";
 import Footbar from "./Sections/Footbar";
 import Home from "./Pages/Home";
-import LandingWvideo from "./Pages/LandingWvideo";
+//import LandingWvideo from "./Pages/LandingWvideo";
 import LandingWimg from "./Pages/LandingWimg";
 
 export const App = () => (
@@ -22,7 +22,7 @@ export const App = () => (
       <Frame>
         <Routes>
           <Route path="/" element={<Navigate replace to={"/cover"} />} />
-          <Route path="/cover" element={<LandingWimg />} />
+          <Route path="/Cover" element={<LandingWimg />} />
           {/* <Route path="/intro" element={<LandingWvideo />} /> */}
           <Route path="/Home" element={<Home language={'id'}/>} />
           <Route path="/id/Home" element={<Home language={'id'}/>} />
@@ -53,7 +53,7 @@ function Frame({ children }: FrameProps) {
     {
       base: "0rem",
       xl: "0rem",
-      "2xl": "8rem",
+      "2xl": "0rem",
     },
     {
       fallback: "2rem",

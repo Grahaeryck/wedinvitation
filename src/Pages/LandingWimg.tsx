@@ -15,43 +15,48 @@ import Indonesia96 from '../Asset/Indonesia96.png';
 
 type Props = {};
 function LandingWimg({}: Props) { 
-    let gAttribute1 : string = 'to';
-    let gAttribute2 : string = "partner";
+    let gAttribute1 : string = 'd';
+    let gAttribute2 : string = 'to';
+    let gAttribute3 : string = "partner";
 
     const [searchParams] = useSearchParams();
+    const [invType, setInvType] = useState<string | null>('AB');
     const [guests, setGuest ] = useState<string | null>('Guest');
     const [partner, setPartner ] = useState<string | any>('Guest Partner');  
     const navigate = useNavigate(); 
 
     const handleOpenID = () => {
         navigate('/id/Home', {
-            state: {
-            }
+            state: {invType:invType}
         })
     }
 
     const handleOpenENG = () => {
         navigate('/eng/Home', {
-            state: {
-            }
+            state: {invType:invType}
         })
     }
 
     const t1 = searchParams.get(gAttribute1);
     const t2 = searchParams.get(gAttribute2);
+    const t3 = searchParams.get(gAttribute3);
+
     
     useEffect(() => {
         document.title = "Sandy & Graha | #HAtiuntukberSANDar";
-        if(t1 && t2)
+        if(t1 && t2 && t3)
         {
-            setGuest(t1);
-            setPartner(t2);
+            setInvType(t1)
+            setGuest(t2);
+            setPartner(t3);
 
-            localStorage.setItem('Guest', JSON.stringify(searchParams.get(gAttribute1)));
-            localStorage.setItem('Partner', JSON.stringify(searchParams.get(gAttribute2)));
+            localStorage.setItem('Type', JSON.stringify(searchParams.get(gAttribute1)));
+            localStorage.setItem('Guest', JSON.stringify(searchParams.get(gAttribute2)));
+            localStorage.setItem('Partner', JSON.stringify(searchParams.get(gAttribute3)));
         }
         else
         {
+            setInvType(JSON.parse(localStorage.getItem('Type')!))
             setGuest(JSON.parse(localStorage.getItem('Guest')!))
             setPartner(JSON.parse(localStorage.getItem('Partner')!))
         }
