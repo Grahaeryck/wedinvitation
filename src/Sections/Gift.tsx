@@ -1,4 +1,5 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
@@ -15,19 +16,20 @@ import {
   TabPanel, 
   Center,
   Grid,
-  GridItem
+  GridItem,
+  SlideFade
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney} from '@fortawesome/free-solid-svg-icons';
 import GiftData from "../Data/GiftData.json";
-import Mandiri from '../Asset/Mandiri.png';
-import BCA from '../Asset/BCA.png';
-import PayPal from '../Asset/PayPal.png';
 
 type Props = {lang:string};
 function Gift({lang}: Props) {
   const tabsEng = ["Mandiri", "BCA", "Paypal", "Address"]
   const tabsID = ["Mandiri", "BCA", "Paypal", "Alamat"]
+
+  const ref = useRef(null)
+  const {inViewport} = useInViewport(ref, {}, {disconnectOnLeave: false}, {})
 
   return (
     <>
@@ -35,7 +37,9 @@ function Gift({lang}: Props) {
       maxW={"container.2xl"}
       h="wrap"
       bg={"#F9F6EE"}
+      ref={ref}
     >
+      <SlideFade in={inViewport} offsetY='-200px' transition={{enter: {duration: 0.8}}}>
       <Flex 
         justify="center" 
         align="center"
@@ -142,6 +146,7 @@ function Gift({lang}: Props) {
           </Stack>
         </Stack>
       </Flex>
+      </SlideFade>
     </Box>
     </>
   );

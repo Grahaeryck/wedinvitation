@@ -62,9 +62,6 @@ function LandingWimg({}: Props) {
         }
     }, []);
 
-    //console.log(searchParams.get('to')); // 'name'
-    //console.log(searchParams.get('partner')); // 'name'
-
     return (
       <>
         <Box 

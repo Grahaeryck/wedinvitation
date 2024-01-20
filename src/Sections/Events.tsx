@@ -1,3 +1,5 @@
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
@@ -15,7 +17,9 @@ import {
   CardBody,
   CardFooter,
   Link,
-  AspectRatio
+  AspectRatio,
+  Fade,
+  SlideFade
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faMap, faCalendarDays, faClock} from '@fortawesome/free-solid-svg-icons';
@@ -27,6 +31,10 @@ import BtnGetDirection from "../Components/BtnGetDirection";
 
 type Props = {lang: string;};
 function Events({lang}: Props) {
+    const ref = useRef(null)
+    const ref2 = useRef(null)
+
+    const {inViewport} = useInViewport(ref,{rootMargin: "100px"}, {disconnectOnLeave: true}, {})
 
     return (
         <>
@@ -51,6 +59,21 @@ function Events({lang}: Props) {
                     <Stack align={'center'}>
                         <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#FAF9F6"}>Rangkaian Acara</Text>
                         <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#FAF9F6"}>Wedding Event</Heading>
+                        <Flex width={{ base: "80%", md: "70%" , lg: "60%" }}>
+                            <Text 
+                              fontSize={{ base: "14px", md: "16px" , lg: "18px" }} 
+                              as="i" 
+                              color={"#FAF9F6"} 
+                              align={'center'}
+                            >
+                              {lang == "id" ? (
+                                'Dengan segala kerendahan hati, kami bermaksud ingin menundang Bapak/Ibu/Saudara/i hadir didalam acara pernikahan yang akan dileselengarakan pada:'
+                              ):(
+                                "With all due respect, we would like to extend our invitation to Mr./Mrs./Brother/Sister to attend the wedding event that will be held on:"
+                              )}
+                            </Text>
+                        </Flex>
+
                     </Stack>
 
                     <Grid
@@ -59,7 +82,8 @@ function Events({lang}: Props) {
                         mt={'20px'}
                     >
                         <GridItem colSpan={{ base: 6, md: 4 , lg: 3 }}>
-                            <Box height='wrap'>
+                            <Fade in={inViewport} transition={{enter: {duration: 3}}}> 
+                                <Box height='wrap' ref={ref}>
                                 <Card 
                                     width={{ base: '340px', md: '420px' , lg: "520"}}
                                     // minW='md'
@@ -137,11 +161,13 @@ function Events({lang}: Props) {
                                         </Flex>
                                     </CardBody>
                                 </Card>
-                            </Box>
+                                </Box>
+                            </Fade>
                         </GridItem>
 
                         <GridItem colSpan={{ base: 6, md: 4 , lg: 3 }}>
-                            <Box height='wrap'>
+                            <Fade in={inViewport} transition={{enter: {duration: 3}}}> 
+                            <Box height='wrap' ref={ref}>
                                 <Card 
                                     width={{ base: '340px', md: '420px' , lg: "520"}}
                                     // minW='md'
@@ -217,10 +243,12 @@ function Events({lang}: Props) {
                                     </CardFooter>
                                 </Card>
                             </Box>
+                            </Fade>
                         </GridItem>
                     </Grid>
 
-                    <Flex justify={'center'} align={'center'} mt={'2rem'}>
+                    <Flex justify={'center'} align={'center'} mt={'2rem'} ref={ref2}>
+                        {/* <SlideFade in={inViewport} offsetY='200px' transition={{enter: {duration: 0.8}}}> */}
                         <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9} border={'3px'} borderColor={'#C19A6B'}>
                             <iframe 
                                 src="https://maps.google.com/maps?q=Gedung Bakorwil Malang&t=&z=17&ie=UTF8&iwloc=&output=embed" 
@@ -228,6 +256,7 @@ function Events({lang}: Props) {
                                 allowFullScreen
                             />
                         </AspectRatio>
+                        {/* </SlideFade> */}
                     </Flex>
                 </Stack>
             </Flex>

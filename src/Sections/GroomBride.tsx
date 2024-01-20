@@ -1,4 +1,5 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
@@ -7,13 +8,16 @@ import {
   Image,
   Divider,
   Text,
-  AbsoluteCenter
+  AbsoluteCenter,
+  SlideFade
 } from "@chakra-ui/react";
 import  Logo180 from "../Asset/Logo180.png";
 import Logo48 from "../Asset/Logo48.png";
 
 type Props = {lang : string;};
 function GroomBride({lang}: Props) {
+    const ref = useRef(null)
+    const {inViewport} = useInViewport(ref, {}, {disconnectOnLeave: false}, {})
 
     return (
         <>
@@ -21,7 +25,9 @@ function GroomBride({lang}: Props) {
             maxW={"container.2xl"}
             h="wrap"
             bg={"#F9F6EE"}
+            ref={ref}
         >
+            <SlideFade in={inViewport} offsetY='-200px' transition={{enter: {duration: 0.8}}}>
             <Flex 
                 justify="center" 
                 align="center"
@@ -90,6 +96,7 @@ function GroomBride({lang}: Props) {
                     </Stack>
                 </Stack>
             </Flex>
+            </SlideFade>
         </Box>
         </>
     );

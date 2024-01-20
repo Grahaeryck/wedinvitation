@@ -17,10 +17,15 @@ type Props = {
 };
 function WelcomePage({language}: Props) {
    const location = useLocation();
-   const invitationType = location.state.invType;
+   const [invType, setInvType] = useState<string | null>('SG');
 
     useEffect(() => {
         document.title = "Sandy & Graha | #HAtiuntukberSANDar";
+
+        if(localStorage.getItem("Type") !== null)
+        {
+          setInvType(localStorage.getItem("Type"))
+        }
       }, []);
 
     return (
@@ -29,7 +34,7 @@ function WelcomePage({language}: Props) {
             <Doa lang={language}/>
             <GroomBride lang={language}/>
             <Events lang={language}/>
-            {invitationType == "ab" ? (''):(invitationType=="AB" ? (''):(<Story lang={language}/>))}
+            {invType == "ab" ? (''):(invType=="AB" ? (''):(<Story lang={language}/>))}
             <Gallery/>
             <Gift lang={language}/>
             <Wishes lang={language}/>

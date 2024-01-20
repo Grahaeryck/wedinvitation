@@ -27,7 +27,7 @@ function Story({lang}: Props) {
                 py='4rem'
             >
                 <Stack align={'center'}>
-                    <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>#HAtiuntukberSANDar</Text>
+                    <Text  fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>#HAtiuntukberSANDar</Text>
                     <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Our Story</Heading>
                 </Stack>
             

@@ -1,30 +1,45 @@
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
   Heading,
   Stack,
-  Text
+  Text,
+  useDisclosure,
+  SlideFade, 
+  Button,
+  ScaleFade
 } from "@chakra-ui/react";
+import { ScrollMotionValues } from 'framer-motion';
+import { disconnect } from 'process';
 
 type Props = {
     lang : string;
 };
-function Doa({lang}: Props) {
 
+function Doa({lang}: Props) {
+    const ref = useRef(null)
+    const {inViewport} = useInViewport(ref, {rootMargin: "-100px"}, {disconnectOnLeave: false}, {})
+    console.log(inViewport)
     return (
         <>
         <Box 
             maxW={"container.2xl"}
             h="wrap"
             bg={"#FAF9F6"}
+            ref={ref}
         >
+            <ScaleFade initialScale={0} in={inViewport} transition={{enter: {duration: 0.8}}}>
             <Flex 
                 justify="center" 
                 align="center"
                 h={'inherit'}
+                
             >
                 <Stack mt="6rem" mb="6rem" >
                     <Stack align={'center'} justify={'center'}>
+
                             <Box width={{ base: '80%px', md: '60%px' , lg: "50%"}} px={'20px'}>
                                 <Flex justify="center" align="center" direction={'column'}>
                                     <Text fontSize={'20px'} as="i" color={"#483C32"}>بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</Text>
@@ -57,7 +72,9 @@ function Doa({lang}: Props) {
                     </Stack>
                 </Stack>
             </Flex>
+            </ScaleFade>
         </Box>
+        
         </>
     );
 

@@ -33,7 +33,7 @@ function Banner({lang}: Props) {
                 <Stack align={'center'}>
                     <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="h1" color={"#f9f6ee"}>Sandy & Graha</Heading>
                     {lang == "id" ? (
-                        <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#f9f6ee"}>Fabruari 24, 2024 | Malang, Indonesia</Text>
+                        <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#f9f6ee"}>Februari 24, 2024 | Malang, Indonesia</Text>
                     ):(
                         <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#f9f6ee"}>February 24, 2024 | Malang, Indonesia</Text>
                     )}

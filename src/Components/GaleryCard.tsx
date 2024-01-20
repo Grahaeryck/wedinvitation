@@ -1,4 +1,5 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
@@ -15,7 +16,8 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure
+  useDisclosure,
+  ScaleFade
 } from "@chakra-ui/react";
 
 import picSample from "../Asset/tl3.jpg";
@@ -27,12 +29,15 @@ type Props = {
   cardSrc: string|any;
 };
 function GaleryCard({cardTitle, cardSrc}: Props) {
+  const ref = useRef(null)
+    const {inViewport} = useInViewport(ref, {rootMargin: "-150px"}, {disconnectOnLeave: false}, {})
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
         <>
-        <Box height={'wrap'} width={'wrap'}>
+        <Box height={'wrap'} width={'wrap'} ref={ref}>
+        <ScaleFade initialScale={0.9} in={inViewport}>
             <Card 
                 w={{ base: '120px', md: '180px' , lg: '280px' }}
                 h={{ base: '220px', md: '280px' , lg: '380px' }}
@@ -105,6 +110,7 @@ function GaleryCard({cardTitle, cardSrc}: Props) {
                   </ModalContent>
                 </Modal>
             </Flex>
+            </ScaleFade>
         </Box>
         </>
     );

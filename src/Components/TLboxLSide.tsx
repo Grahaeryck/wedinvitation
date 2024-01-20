@@ -1,10 +1,12 @@
-//import { ReactNode, useState, useMemo, useEffect } from "react";
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
   Text,
   Divider,
-  Circle
+  Circle,
+  ScaleFade
 } from "@chakra-ui/react";
 
 type Props = {
@@ -14,7 +16,8 @@ type Props = {
   
 
   function TLboxLSide({ yearTitle, children}: Props) {
-
+    const ref = useRef(null)
+    const {inViewport} = useInViewport(ref, {rootMargin: "-150px"}, {disconnectOnLeave: false}, {})
     return (
         <>
         <Box 
@@ -23,7 +26,9 @@ type Props = {
             borderBottomWidth={'2px'} 
             borderRightColor={'#C19A6B'} 
             borderRightWidth={'2px'}
+            ref={ref}
         >
+            <ScaleFade initialScale={0.9} in={inViewport}>
             <Flex 
                 
                 justify="center" 
@@ -43,10 +48,11 @@ type Props = {
                         <Circle  size='12px' bg='#C19A6B' color='white'/>
                     </Flex>
                 </Flex>
-                <Text fontSize='18px'>
+                <Text transform={"rotate(90deg)"} fontSize='18px'>
                     {yearTitle}
                 </Text>
             </Flex>
+            </ScaleFade>
         </Box>
         </>
     );
