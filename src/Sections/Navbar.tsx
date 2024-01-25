@@ -34,10 +34,10 @@ type Props = {
           path: "/cover",
           text: "Cover",
         },
-        {
-          path: "/Home",
-          text: "Home",
-        },
+        // {
+        //   path: "/Home",
+        //   text: "Home",
+        // },
         {
           path: "/Event",
           text: "Event",

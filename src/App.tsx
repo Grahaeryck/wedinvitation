@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Container,
@@ -13,10 +13,9 @@ import {
 import Navbar from "./Sections/Navbar";
 import Footbar from "./Sections/Footbar";
 import Home from "./Pages/Home";
-//import LandingWvideo from "./Pages/LandingWvideo";
-import LandingWimg from "./Pages/LandingWimg";
 import NewLanding from './Pages/NewLanding';
 import GallerySwipper from './Sections/GallerySwipper';
+import Events from './Sections/Events';
 
 export const App = () => (
   <>
@@ -25,12 +24,12 @@ export const App = () => (
         <Routes>
           <Route path="/" element={<Navigate replace to={"/cover"} />} />
           <Route path="/Cover" element={<NewLanding />} />
-          {/* <Route path="/intro" element={<LandingWvideo />} /> */}
-          <Route path="/Home" element={<Home language={'id'}/>} />
-          <Route path="/id/Home" element={<Home language={'id'}/>} />
-          <Route path="/eng/Home" element={<Home language={'eng'}/>} />
+          <Route path="/Home" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
+          <Route path="/id/Home" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
+          <Route path="/eng/Home" element={<Home language={'eng'} type={localStorage.getItem("Type")!.toString()}/>} />
           <Route path="/Galery" element={<GallerySwipper/>} />
-          <Route path="*" element={<Home language={'id'}/>} />
+          <Route path="/Event" element={<Events lang={'id'}/>} />
+          <Route path="*" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
         </Routes>
       </Frame>
     </Router>

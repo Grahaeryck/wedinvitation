@@ -23,7 +23,7 @@ import {
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faMap, faCalendarDays, faClock} from '@fortawesome/free-solid-svg-icons';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+// import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import bgIMG from "../Asset/eventBG.jpg";
 import Frame from "../Asset/Frame.png";
 import Flower2 from "../Asset/Flower2.png";
@@ -61,6 +61,7 @@ function Events({lang}: Props) {
                     <Stack align={'center'}>
                         <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#FAF9F6"}>Rangkaian Acara</Text>
                         <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#FAF9F6"}>Wedding Event</Heading>
+                        <Text mt={'1rem'} fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#FAF9F6"}>السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</Text>
                         <Flex width={{ base: "80%", md: "70%" , lg: "60%" }}>
                             <Text 
                               fontSize={{ base: "14px", md: "16px" , lg: "18px" }} 
@@ -69,7 +70,7 @@ function Events({lang}: Props) {
                               align={'center'}
                             >
                               {lang == "id" ? (
-                                'Dengan segala kerendahan hati, kami bermaksud ingin menundang Bapak/Ibu/Saudara/i hadir didalam acara pernikahan yang akan dileselengarakan pada:'
+                                'Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk dapat hadir dalam acara Pernikahan putra dan putri kami yang Insya Allah akan diselenggarakan pada:'
                               ):(
                                 "With all due respect, we would like to extend our invitation to Mr./Mrs./Brother/Sister to attend the wedding event that will be held on:"
                               )}
@@ -255,6 +256,41 @@ function Events({lang}: Props) {
                         </AspectRatio>
                         {/* </SlideFade> */}
                     </Flex>
+
+                    <Stack mt={'2rem'} align={'center'}>
+                        <Flex width={{ base: "80%", md: "70%" , lg: "60%" }} direction={'column'}>
+                            <Text 
+                              fontSize={{ base: "14px", md: "16px" , lg: "18px" }} 
+                              as="i" 
+                              color={"#FAF9F6"} 
+                              align={'center'}
+                            >
+                              {lang == "id" ? (
+                                'Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir untuk memberikan doa restu kepada putra-putri kami.'
+                              ):(
+                                "Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir untuk memberikan doa restu kepada putra-putri kami."
+                              )}
+                            </Text>
+
+                            <Text 
+                              mt={'1rem'}
+                              fontSize={{ base: "14px", md: "16px" , lg: "18px" }} 
+                              as="i" 
+                              color={"#FAF9F6"} 
+                              align={'center'}
+                            >
+                              {lang == "id" ? (
+                                'Atas kehadiran dan doa restunya kami ucapkan terima kasih.'
+                              ):(
+                                'Atas kehadiran dan doa restunya kami ucapkan terima kasih.'
+                              )}
+                            </Text>
+
+                        </Flex>
+                        <Text mt={'1rem'} fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#FAF9F6"}>وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ</Text>
+
+                    </Stack>
+
                 </Stack>
                 
             </Flex>

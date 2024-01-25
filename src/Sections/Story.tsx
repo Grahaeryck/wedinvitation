@@ -93,15 +93,16 @@ function Story({lang}: Props) {
                     <TLboxLSide yearTitle={"Nov'22"}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
-                                Hingga di awal bulan November, Graha merasa nyaman dan ingin menjalin sebuah hubungan. 
-                                Namun saat itu ia masih bimbang, ntah bagaimana cara untuk mengungkapkan isi hatinya dan ia memilih untuk memendamnya terlebih dahulu. Di sisi lain, 
-                                Sandy belum menyadari hal tersebut. 
+                                Awal bulan November, Graha merasa nyaman dan ingin menjalin sebuah hubungan. Namun saat itu ia masih bimbang, 
+                                dan memilih untuk memendamnya terlebih dahulu. Hingga akhirnya pada bulan Desember, Graha mengajak untuk berjumpa kembali, 
+                                ia membulatkan tekad untuk menyatakan keseriusannya. 
                             </Text>
                             
                         ):(
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
-                                As November dawned, Graha found comfort and a desire to cultivate a deeper connection. 
-                                However, grappling with uncertainty, Graha chose to conceal these sentiments for a while, unbeknownst to Sandy.
+                                Awal bulan November, Graha merasa nyaman dan ingin menjalin sebuah hubungan. Namun saat itu ia masih bimbang, 
+                                dan memilih untuk memendamnya terlebih dahulu. Hingga akhirnya pada bulan Desember, Graha mengajak untuk berjumpa kembali, 
+                                ia membulatkan tekad untuk menyatakan keseriusannya.
                             </Text>
                         )}
                         
@@ -110,23 +111,19 @@ function Story({lang}: Props) {
                     <TLboxRSide yearTitle={lang == "id" ? ("Des'22"):("Dec'22")}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
-                                Tak mampu lagi menahan rasa, di bulan Desember, Graha mengajak untuk berjumpa kembali, ia membulatkan tekad untuk segera menyatakan isi hatinya. 
-                                Pada saat itu, Sandy menyetujui ajakannya tanpa tahu apa yang akan terjadi. 
-                                Malam saat Graha mengantar Sandy pulang, Graha mulai mengutarakan isi hatinya yang tentu membuat Sandy kaget dan bingung. 
-                                Namun, Sandy dapat melihat ketulusannya. 
+                                Dan pada hari itu, 4 Desember 2022, menjadi tanggal yang istimewa bagi kami, 
+                                Itulah awal cerita kami.. Kami ingin terus merajut cerita indah bersama hingga akhir nanti 🤍
                             </Text>
                         ):(
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
-                                Unable to suppress emotions any longer, come December, Graha extended an invitation to reunite, 
-                                resolute in expressing the contents of the heart. In that moment, Sandy agreed without a glimpse of what lay ahead. 
-                                As Graha escorted Sandy home that night, heartfelt confessions unfolded, 
-                                leaving Sandy both surprised and perplexed. Yet, in Graha's sincerity, Sandy found clarity. 
+                                Dan pada hari itu, 4 Desember 2022, menjadi tanggal yang istimewa bagi kami, 
+                                Itulah awal cerita kami.. Kami ingin terus merajut cerita indah bersama hingga akhir nanti 🤍
                             </Text>    
                         )}
                         
                     </TLboxRSide>
 
-                    <TLboxLSide yearTitle={lang == "id" ? ("Des'22"):("Dec'22")}>
+                    {/* <TLboxLSide yearTitle={lang == "id" ? ("Des'22"):("Dec'22")}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
                                 Dan pada malam itu, 4 Desember 2022, menjadi tanggal yang istimewa bagi kami, 
@@ -140,7 +137,7 @@ function Story({lang}: Props) {
                             </Text>     
                         )}
                        
-                    </TLboxLSide>
+                    </TLboxLSide> */}
                 </Flex>
             </Flex>
         </Box>
