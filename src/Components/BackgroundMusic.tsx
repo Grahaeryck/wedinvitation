@@ -1,6 +1,5 @@
-import { ReactNode, useState, useMemo, useEffect } from "react";
-//import useSound from 'use-sound';
-//import {Sound} from "react-sound";
+import React, { ReactNode, useState, useMemo, useEffect, UIEvent, useRef } from "react";
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
@@ -29,9 +28,8 @@ function pause(){
 
 
 type Props = {};
-function BackgroundMusic({}: Props) {    
+function BackgroundMusic({}: Props) {
     const [playing, setPlaying ] = useState("paused");
-
     useEffect(()=>{
         if(playing=='playing')
         {
@@ -54,7 +52,7 @@ function BackgroundMusic({}: Props) {
     return (
       <>
       <Box>
-        <IconButton
+          <IconButton
           isRound={true}
           size={'lg'}
           variant='solid'
@@ -74,7 +72,7 @@ function BackgroundMusic({}: Props) {
                 <FontAwesomeIcon icon={faVolumeXmark} style={{color: "#483C32"}}/>
                 : 
                 <FontAwesomeIcon icon={faVolumeHigh} style={{color: "#483C32"}}/>}
-        />
+          />
       </Box>
       </>
     );

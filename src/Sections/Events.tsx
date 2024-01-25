@@ -46,7 +46,9 @@ function Events({lang}: Props) {
             bgPosition="center"
             bgRepeat="no-repeat"
             boxShadow='dark-lg'
+            ref={ref}
         >
+            <Fade in={inViewport} transition={{enter: {duration: 3}}}> 
             <Flex 
                 justify="center" 
                 align={"center"}
@@ -82,8 +84,8 @@ function Events({lang}: Props) {
                         mt={'20px'}
                     >
                         <GridItem colSpan={{ base: 6, md: 4 , lg: 3 }}>
-                            <Fade in={inViewport} transition={{enter: {duration: 3}}}> 
-                                <Box height='wrap' ref={ref}>
+                            {/* <Fade in={inViewport} transition={{enter: {duration: 3}}}>  */}
+                            <Box height='wrap'>
                                 <Card 
                                     width={{ base: '340px', md: '420px' , lg: "520"}}
                                     // minW='md'
@@ -105,47 +107,35 @@ function Events({lang}: Props) {
                                         </Flex>
                                     </CardHeader>
                                     <CardBody>
-                                        <Flex justify='center' alignItems='center'>
-                                            <Stack>
-                                                <SimpleGrid columns={2} spacing='50px'>
-                                                    <Box height='wrap' minW="100px">
+                                        <Stack>
+                                            <Flex justify={'center'} alignItems='center' direction={'column'}>
+                                                <Box height='wrap' width={'wrap'} mb={'10px'}>
+                                                   <FontAwesomeIcon icon={faCalendarDays} beat size="lg" style={{color: "#F9F6EE",}}/>
+                                                </Box>
+                                                {lang == "id" ? (
+                                                    <Text fontSize='20px' color={"#FAF9F6"}> Sabtu. 24 Februari 2024 </Text>
+                                                ):(
+                                                    <Text fontSize='20px' color={"#FAF9F6"}> Saturday. February 24, 2024 </Text>
+                                                )}
+                                                <Box mt={'5px'}>
+                                                <Flex justify='center' alignItems='center' flexWrap='wrap' gap='4rem'>
+                                                    <Box height='wrap'>
                                                         <Flex justify='center' alignItems='center' direction={'column'}>
-                                                            <Box height='wrap' width={'wrap'} mb={'10px'}>
-                                                                <FontAwesomeIcon icon={faCalendarDays} size="lg" style={{color: "#F9F6EE",}}/>
-                                                            </Box>
                                                             {lang == "id" ? (
                                                                 <>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Sabtu 24 </Text>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Februari 2024 </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Pukul: 15:00 - 16:30 </Text>
                                                                 </>
                                                             ):(
                                                                 <>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Saturday 24 </Text>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> February 2024 </Text>
-                                                                </>
-                                                            )}
-                                                        </Flex>
-                                                    </Box>
-                                                    <Box height='wrap' minW="100px">
-                                                        <Flex justify='center' alignItems='center' direction={'column'}>
-                                                            <Box height='wrap' width={'wrap'} mb={'10px'}>
-                                                                <FontAwesomeIcon icon={faClock} beat size="lg" style={{color: "#F9F6EE",}}/>
-                                                            </Box>
-                                                            {lang == "id" ? (
-                                                                <>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Mulai: 15:00 </Text>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Selesai: 16:30 </Text>
-                                                                </>
-                                                            ):(
-                                                                <>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Start: 15:00 </Text>
-                                                                    <Text fontSize='18px' color={"#FAF9F6"}> End: 16:30 </Text>
+                                                                    <Text fontSize='18px' color={"#FAF9F6"}> Time: 15:00 - 16:30 </Text>
                                                                 </>
                                                             )}
                                                             
                                                         </Flex>
                                                     </Box>
-                                                </SimpleGrid>
+                                                </Flex>
+                                                </Box>
+
                                                 <Flex mt={'2rem'} justify={'center'} alignItems='center' direction={'column'}>
                                                     <Box height='wrap' width={'wrap'} mb={'10px'}>
                                                         <FontAwesomeIcon icon={faMap} beat size="lg" style={{color: "#F9F6EE",}}/>
@@ -156,18 +146,22 @@ function Events({lang}: Props) {
                                                     <BtnGetDirection>
                                                         {lang == "id" ? ('Buka Peta'):('Get Direction')}
                                                     </BtnGetDirection>
+                                                    
                                                 </Flex>
-                                            </Stack>
-                                        </Flex>
+                                            </Flex>
+                                        </Stack>
                                     </CardBody>
+                                    <CardFooter justify='center' alignItems='center'>
+                                        <Image src={Flower2} alt='flower' />
+                                    </CardFooter>
                                 </Card>
-                                </Box>
-                            </Fade>
+                            </Box>
+                            {/* </Fade> */}
                         </GridItem>
 
                         <GridItem colSpan={{ base: 6, md: 4 , lg: 3 }}>
-                            <Fade in={inViewport} transition={{enter: {duration: 3}}}> 
-                            <Box height='wrap' ref={ref}>
+                            {/* <Fade in={inViewport} transition={{enter: {duration: 3}}}>  */}
+                            <Box height='wrap'>
                                 <Card 
                                     width={{ base: '340px', md: '420px' , lg: "520"}}
                                     // minW='md'
@@ -191,6 +185,9 @@ function Events({lang}: Props) {
                                     <CardBody>
                                         <Stack>
                                             <Flex justify={'center'} alignItems='center' direction={'column'}>
+                                                <Box height='wrap' width={'wrap'} mb={'10px'}>
+                                                   <FontAwesomeIcon icon={faCalendarDays} beat size="lg" style={{color: "#F9F6EE",}}/>
+                                                </Box>
                                                 {lang == "id" ? (
                                                     <Text fontSize='20px' color={"#FAF9F6"}> Sabtu. 24 Februari 2024 </Text>
                                                 ):(
@@ -243,7 +240,7 @@ function Events({lang}: Props) {
                                     </CardFooter>
                                 </Card>
                             </Box>
-                            </Fade>
+                            {/* </Fade> */}
                         </GridItem>
                     </Grid>
 
@@ -259,7 +256,9 @@ function Events({lang}: Props) {
                         {/* </SlideFade> */}
                     </Flex>
                 </Stack>
+                
             </Flex>
+            </Fade>
         </Box>
         </>
     );

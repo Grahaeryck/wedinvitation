@@ -1,16 +1,20 @@
-//import { ReactNode, useState, useMemo, useEffect } from "react";
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
   Heading,
   Stack,
-  Text
+  Text,
+  Fade
 } from "@chakra-ui/react";
 import TLboxRSide from "../Components/TLboxRSide";
 import TLboxLSide from "../Components/TLboxLSide";
 
 type Props = {lang: string;};
 function Story({lang}: Props) {
+    const ref = useRef(null)
+    const {inViewport} = useInViewport(ref, {rootMargin: "-150px"}, {disconnectOnLeave: false}, {})
 
     return (
         <>
@@ -25,11 +29,14 @@ function Story({lang}: Props) {
                 h={'inherit'}
                 direction={'column'}
                 py='4rem'
+                ref={ref}
             >
-                <Stack align={'center'}>
-                    <Text  fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>#HAtiuntukberSANDar</Text>
-                    <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Our Story</Heading>
-                </Stack>
+                <Fade in={inViewport} transition={{enter: {duration: 1}}}> 
+                    <Stack align={'center'}>
+                        <Text  fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>#HAtiuntukberSANDar</Text>
+                        <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Our Story</Heading>
+                    </Stack>
+                </Fade>
             
                 <Flex maxWidth={'80%'} mt={'2rem'} direction={'column'}>
                     {/* <StoryCarousel/> */}
@@ -68,7 +75,7 @@ function Story({lang}: Props) {
                         
                     </TLboxLSide>
 
-                    <TLboxRSide yearTitle={"Jun 22"}>
+                    <TLboxRSide yearTitle={"May'22"}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
                                 Menjadi awal perjumpaan kami, yang awalnya jauh akhirnya berjumpa secara langsung. 
@@ -83,7 +90,7 @@ function Story({lang}: Props) {
                         
                     </TLboxRSide>
 
-                    <TLboxLSide yearTitle={"Nov 22"}>
+                    <TLboxLSide yearTitle={"Nov'22"}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
                                 Hingga di awal bulan November, Graha merasa nyaman dan ingin menjalin sebuah hubungan. 
@@ -100,7 +107,7 @@ function Story({lang}: Props) {
                         
                     </TLboxLSide>
 
-                    <TLboxRSide yearTitle={lang == "id" ? ("Des 2022"):("Dec 2022")}>
+                    <TLboxRSide yearTitle={lang == "id" ? ("Des'22"):("Dec'22")}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
                                 Tak mampu lagi menahan rasa, di bulan Desember, Graha mengajak untuk berjumpa kembali, ia membulatkan tekad untuk segera menyatakan isi hatinya. 
@@ -119,7 +126,7 @@ function Story({lang}: Props) {
                         
                     </TLboxRSide>
 
-                    <TLboxLSide yearTitle={lang == "id" ? ("Des 2022"):("Dec 2022")}>
+                    <TLboxLSide yearTitle={lang == "id" ? ("Des'22"):("Dec'22")}>
                         {lang == "id" ? (
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
                                 Dan pada malam itu, 4 Desember 2022, menjadi tanggal yang istimewa bagi kami, 

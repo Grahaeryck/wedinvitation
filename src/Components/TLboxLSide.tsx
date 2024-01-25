@@ -35,14 +35,14 @@ type Props = {
                 align="center"  
                 //h={{ base: "350px", md: "150px" , lg: "180px" }}
                 h='wrap'
-                gap={'1rem'}
-                px='1rem'
-                py='2rem'
+                gap={'0.5rem'}
+                px='0.5rem'
+                py='1rem'
             >
                 <Flex align={'center'} justify={'center'} width={'600px'}>
                     {children}
                 </Flex>
-                <Flex height={'100px'} width={'30px'} justify={'center'}>
+                <Flex height={'100px'} width={'15px'} justify={'center'}>
                     <Divider borderColor={'#C19A6B'} borderWidth='1px' orientation='vertical'/>
                     <Flex ml='-7px' height='inherit' align={'center'}>
                         <Circle  size='12px' bg='#C19A6B' color='white'/>

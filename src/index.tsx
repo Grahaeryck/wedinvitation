@@ -14,7 +14,7 @@ root.render(
     <ChakraProvider theme={Theme}>
       <ColorModeScript initialColorMode={Theme.config.initialColorMode} />
       <App />
-      <BackgroundMusic/>
+      {/* <BackgroundMusic/> */}
     </ChakraProvider>
   </React.StrictMode>
 );

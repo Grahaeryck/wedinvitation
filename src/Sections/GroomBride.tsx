@@ -9,10 +9,12 @@ import {
   Divider,
   Text,
   AbsoluteCenter,
-  SlideFade
+  SlideFade,
+  Slide
 } from "@chakra-ui/react";
-import  Logo180 from "../Asset/Logo180.png";
+// import  Logo180 from "../Asset/Logo180.png";
 import Logo48 from "../Asset/Logo48.png";
+import { Directions } from '@mui/icons-material';
 
 type Props = {lang : string;};
 function GroomBride({lang}: Props) {
@@ -27,7 +29,8 @@ function GroomBride({lang}: Props) {
             bg={"#F9F6EE"}
             ref={ref}
         >
-            <SlideFade in={inViewport} offsetY='-200px' transition={{enter: {duration: 0.8}}}>
+            <SlideFade in={inViewport}  offsetY='-200px'  transition={{enter: {duration: 0.8}}}>
+            {/* <Slide direction='left' in={inViewport} style={{ zIndex: 10 }}> */}
             <Flex 
                 justify="center" 
                 align="center"
@@ -96,6 +99,7 @@ function GroomBride({lang}: Props) {
                     </Stack>
                 </Stack>
             </Flex>
+            {/* </Slide> */}
             </SlideFade>
         </Box>
         </>

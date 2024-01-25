@@ -39,13 +39,15 @@ type Props = {
                 align="center"  
                 //h={{ base: "350px", md: "150px" , lg: "180px" }}
                 h='wrap'
-                gap={'1rem'}
-                px='1rem'
-                py='2rem'
+                gap={'0.5rem'}
+                px='0.5rem'
+                py='1rem'
             >
-                <Text transform={"rotate(-90deg)"} fontSize='18px'>
-                    {yearTitle}
-                </Text>
+                <Flex>
+                    <Text fontSize='18px' transform={"rotate(-90deg)"}>
+                        {yearTitle}
+                    </Text>
+                </Flex>
                 <Flex height={'100px'} width={'30px'} justify={'center'}>
                     <Divider borderColor={'#C19A6B'} borderWidth='1px' orientation='vertical'/>
                     <Flex ml='-7px' height='inherit' align={'center'}>

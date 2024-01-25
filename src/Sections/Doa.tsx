@@ -11,8 +11,6 @@ import {
   Button,
   ScaleFade
 } from "@chakra-ui/react";
-import { ScrollMotionValues } from 'framer-motion';
-import { disconnect } from 'process';
 
 type Props = {
     lang : string;
@@ -21,7 +19,6 @@ type Props = {
 function Doa({lang}: Props) {
     const ref = useRef(null)
     const {inViewport} = useInViewport(ref, {rootMargin: "-100px"}, {disconnectOnLeave: false}, {})
-    console.log(inViewport)
     return (
         <>
         <Box 

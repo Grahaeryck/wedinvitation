@@ -1,4 +1,5 @@
-//import { ReactNode, useState, useMemo, useEffect } from "react";
+import React, { UIEvent, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
 import {
   Box,
   Flex,
@@ -7,14 +8,18 @@ import {
   Text,
   Grid,
   GridItem,
-  AspectRatio
+  AspectRatio,
+  Fade
 } from "@chakra-ui/react";
 import GaleryCard from "../Components/GaleryCard";
 import GalleryData from "../Data/GalleryData.json";
+import GallerySwipper from '../Sections/GallerySwipper';
 
 
 type Props = {};
 function Gallery({}: Props) {
+    const ref = useRef(null)
+    const {inViewport} = useInViewport(ref, {rootMargin: "-150px"}, {disconnectOnLeave: false}, {})
 
     return (
         <>
@@ -27,14 +32,20 @@ function Gallery({}: Props) {
                 justify="center" 
                 align="center"
                 h={'inherit'}
+                ref={ref}
             >
+                
                 <Stack mt="6rem" mb="6rem" align={'center'}>
-                    <Stack align={'center'} justify="center" >
-                        <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>Galeri</Text>
-                        <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Wedding Gallery</Heading>
-                    </Stack>
+                    <Fade in={inViewport} transition={{enter: {duration: 1}}}> 
+                        <Stack align={'center'} justify="center" >
+                            <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="i" color={"#483C32"}>Galeri</Text>
+                            <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="i" color={"#C19A6B"}>Wedding Gallery</Heading>
+                        </Stack>
+                    </Fade>
 
-                    <Flex justify={'center'} align={'center'}>
+                    <GallerySwipper/>
+
+                    {/* <Flex justify={'center'} align={'center'}>
                         <Grid
                           templateColumns='repeat(6, 1fr)'
                           gap={'2rem'}
@@ -47,7 +58,7 @@ function Gallery({}: Props) {
                             ))}
                         </Grid>
                         
-                    </Flex>
+                    </Flex> */}
                     <Flex justify={'center'} align={'center'} mt={'2rem'} direction={'column'}>
                         <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
                             <iframe 

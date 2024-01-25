@@ -2,31 +2,36 @@
     {
         "id" : "1",
         "title" : "Cantik Banget kan",
-        "imgSource" : "https://hatiuntukbersandar.com/Image/Gallery1.jpeg"
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G1.jpg"
     },
     {
         "id" : "2",
         "title" : "Cantik Banget kan",
-        "imgSource" : "https://hatiuntukbersandar.com/Image/Gallery1.jpeg"
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G2.jpg"
     },
     {
         "id" : "3",
         "title" : "Cantik Banget kan",
-        "imgSource" : "https://hatiuntukbersandar.com/Image/Gallery1.jpeg"
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G3.jpg"
     },
     {
         "id" : "4",
         "title" : "Cantik Banget kan",
-        "imgSource" : "https://hatiuntukbersandar.com/Image/Gallery1.jpeg"
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G4.jpg"
     },
     {
         "id" : "5",
         "title" : "Cantik Banget kan",
-        "imgSource" : "https://hatiuntukbersandar.com/Image/Gallery1.jpeg"
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G5.jpg"
     },
     {
         "id" : "6",
         "title" : "Cantik Banget kan",
-        "imgSource" : "https://hatiuntukbersandar.com/Image/Gallery1.jpeg"
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G6.jpg"
+    },
+    {
+        "id" : "7",
+        "title" : "Cantik Banget kan",
+        "imgSource" : "https://hatiuntukbersandar.com/Image/GalleryImg/G7.jpg"
     }
 ]

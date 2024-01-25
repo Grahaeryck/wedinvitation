@@ -9,7 +9,7 @@ import Gallery from "../Sections/Gallery";
 import Gift from "../Sections/Gift";
 import Wishes from "../Sections/Wishes";
 import Attendance from "../Sections/Attendance";
-
+import GallerySwipper from '../Sections/GallerySwipper';
 
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
 function WelcomePage({language}: Props) {
    const location = useLocation();
    const [invType, setInvType] = useState<string | null>('SG');
-
+   
     useEffect(() => {
         document.title = "Sandy & Graha | #HAtiuntukberSANDar";
 
@@ -35,7 +35,8 @@ function WelcomePage({language}: Props) {
             <GroomBride lang={language}/>
             <Events lang={language}/>
             {invType == "ab" ? (''):(invType=="AB" ? (''):(<Story lang={language}/>))}
-            <Gallery/>
+            {/* <Gallery/> */}
+            <GallerySwipper/>
             <Gift lang={language}/>
             <Wishes lang={language}/>
             <Attendance lang={language}/>

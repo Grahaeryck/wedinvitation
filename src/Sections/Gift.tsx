@@ -134,7 +134,7 @@ function Gift({lang}: Props) {
                           </Box>
                           <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Rr. Sandy Sitia Nur Annisa</Text>
                           <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"} align={'center'}>
-                              Puri Orchard Appartment. Jl. Lkr. Luar Barat No.Kav. 8, Rw. Buaya, Kecamatan Cengkareng, 
+                              OGA-3916. Puri Orchard Appartment. Jl. Lkr. Luar Barat No.Kav. 8, Rw. Buaya, Kecamatan Cengkareng, 
                               Kota Jakarta Barat, DKI Jakarta 11740
                           </Text>
                       </Flex>
