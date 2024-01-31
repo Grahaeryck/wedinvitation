@@ -119,7 +119,6 @@ function NewLanding({}: Props) {
                         direction={'column'}
                     >
                         <Stack align={'center'}>
-                        <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#483C32"} >السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</Text>
                             <Text fontSize={{ base: "18px", md: "20px" , lg: "25px" }} as="p" color={"#483C32"} >We invite you to the wedding of</Text>
                             <Heading fontSize={{ base: "35px", md: "45px" , lg: "50px" }} as="h1" color={"#483C32"}>Sandy & Graha</Heading>
                             <Box 

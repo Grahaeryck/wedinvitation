@@ -57,7 +57,7 @@ function Gift({lang}: Props) {
                 align={'center'}
               >
                 {lang == "id" ? (
-                  "Kehadiran dan doa restu anda di hari spesial kami adalah hadiah terbaik bagi kami. Namun, apabila memberi adalah tanda cinta, kami akan menerima dengan senang hati. Silahkan untuk dapat cek detail dibawah ini."
+                  "Kehadiran dan doa restu anda di hari spesial kami merupakan hadiah terbaik bagi kami. Namun, apabila memberi adalah tanda cinta, kami akan menerima dengan senang hati. Silahkan untuk dapat cek detail dibawah ini."
         
                 ):(
                   "Your presence and blessings on our special day are the best gifts for us. However, if you wish to celebrate with a gift, please check the details below. Thank you."

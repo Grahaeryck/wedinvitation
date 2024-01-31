@@ -6,8 +6,6 @@ import {
   Heading,
   Stack,
   Text,
-  Grid,
-  GridItem,
   AspectRatio,
   Fade
 } from "@chakra-ui/react";
@@ -16,7 +14,6 @@ import {
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import GalleryData from "../Data/GalleryData.json";
-import bgIMG from "../Asset/Banner.jpeg"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -80,13 +77,13 @@ function GallerySwipper() {
               ))}
             </Swiper>
             <Flex justify={'center'} align={'center'} mt={'2rem'} mb={'6rem'} direction={'column'}>
-              <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
+              {/* <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
                 <iframe 
                     src="https://www.youtube.com/embed/wqcu0j3Wsys?si=RcWJIHck1OXAc5-v" 
                     title="Sandy & Graha" 
                     allowFullScreen
                 />
-              </AspectRatio>
+              </AspectRatio> */}
               <AspectRatio mt='2rem' height="152px" width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
                 <iframe 
                     src="https://open.spotify.com/embed/playlist/5zVA9wRgKt20ReAApBFRmH?utm_source=generator&theme=0" 

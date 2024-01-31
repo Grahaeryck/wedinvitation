@@ -9,7 +9,8 @@ import {
   ScaleFade,
   useDisclosure
 } from "@chakra-ui/react";
-import bgIMG from "../Asset/Banner.jpeg"
+// import bgIMG from "../Asset/Banner.jpeg";
+import bgIMG from '../Asset/UpscaledNewBanner .jpeg';
 
 type Props = {
     lang: string;

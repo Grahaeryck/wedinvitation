@@ -24,12 +24,12 @@ export const App = () => (
         <Routes>
           <Route path="/" element={<Navigate replace to={"/cover"} />} />
           <Route path="/Cover" element={<NewLanding />} />
-          <Route path="/Home" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
+          {/* <Route path="/Home" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
           <Route path="/id/Home" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
-          <Route path="/eng/Home" element={<Home language={'eng'} type={localStorage.getItem("Type")!.toString()}/>} />
+          <Route path="/eng/Home" element={<Home language={'eng'} type={localStorage.getItem("Type")!.toString()}/>} /> */}
           <Route path="/Galery" element={<GallerySwipper/>} />
           <Route path="/Event" element={<Events lang={'id'}/>} />
-          <Route path="*" element={<Home language={'id'} type={localStorage.getItem("Type")!.toString()}/>} />
+          <Route path="*" element={<NewLanding />} />
         </Routes>
       </Frame>
     </Router>

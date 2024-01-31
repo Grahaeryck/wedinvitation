@@ -11,6 +11,10 @@ import Wishes from "../Sections/Wishes";
 import Attendance from "../Sections/Attendance";
 import GallerySwipper from '../Sections/GallerySwipper';
 
+import {
+  Text
+} from "@chakra-ui/react";
+
 
 type Props = {
   language: string;
@@ -39,8 +43,8 @@ function WelcomePage({language, type}: Props) {
             {/* <Gallery/> */}
             <GallerySwipper/>
             <Gift lang={language}/>
-            <Wishes lang={language}/>
-            <Attendance lang={language}/>
+            {/* <Wishes lang={language}/>
+            <Attendance lang={language}/> */}
         </>
     );
 
