@@ -13,8 +13,12 @@ import {
   CardBody
 } from "@chakra-ui/react";
 
-type Props = {};
-function WishesCard({}: Props) {    
+type Props = {
+  name : string;
+  timeposted: string;
+  comments: string;
+};
+function WishesCard({name,timeposted, comments }: Props) {    
     return (
       <>
         <Flex 
@@ -29,9 +33,9 @@ function WishesCard({}: Props) {
                 width={{ base: "300px", md: "400px" , lg: "800px" }}
             >
               <CardBody>
-                <Heading color={'#483C32'} size='md'>Muhammad Swift</Heading>
-                <Text fontSize={{ base: "10px", md: "12px" , lg: "12px" }} color={'rgba(128, 139, 150, 0.7)'}>18 Jaunary, 18:00</Text>
-                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+                <Heading color={'#483C32'} size='md'>{name}</Heading>
+                <Text fontSize={{ base: "10px", md: "12px" , lg: "12px" }} color={'rgba(128, 139, 150, 0.7)'}>{timeposted}</Text>
+                <Text>{comments}</Text>
               </CardBody>
             </Card>
         </Flex>

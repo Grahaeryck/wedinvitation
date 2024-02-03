@@ -16,6 +16,7 @@ import Home from "./Pages/Home";
 import NewLanding from './Pages/NewLanding';
 import GallerySwipper from './Sections/GallerySwipper';
 import Events from './Sections/Events';
+import Wishes from './Sections/Wishes';
 
 export const App = () => (
   <>
@@ -29,6 +30,7 @@ export const App = () => (
           <Route path="/eng/Home" element={<Home language={'eng'} type={localStorage.getItem("Type")!.toString()}/>} /> */}
           <Route path="/Galery" element={<GallerySwipper/>} />
           <Route path="/Event" element={<Events lang={'id'}/>} />
+          <Route path="/Rsvp" element={<Wishes lang={'id'}/>} />
           <Route path="*" element={<NewLanding />} />
         </Routes>
       </Frame>

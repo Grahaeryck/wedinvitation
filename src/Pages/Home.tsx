@@ -43,8 +43,8 @@ function WelcomePage({language, type}: Props) {
             {/* <Gallery/> */}
             <GallerySwipper/>
             <Gift lang={language}/>
-            {/* <Wishes lang={language}/>
-            <Attendance lang={language}/> */}
+            <Wishes lang={language}/>
+            <Attendance lang={language}/>
         </>
     );
 

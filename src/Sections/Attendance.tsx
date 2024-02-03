@@ -14,16 +14,61 @@ import {
   GridItem,
   RadioGroup,
   Radio,
-  theme
+  theme,
+  useToast
 } from "@chakra-ui/react";
 import { 
     InfoOutlineIcon
 } from '@chakra-ui/icons';
 import AttendanceBG from "../Asset/DSC00481.jpg";
+import {addReqComment} from '../API/WedAPI';
 
 type Props = {lang: string;};
 function Attendance({lang}: Props) {
-    const [kehadiran, setKehadiran] = useState("");
+    const toast = useToast()
+    const [namaTamu, setNamaTamu] = useState("");
+    const [commentInput, setCommentInput] = useState("");
+    const [sesiTamu, setSesiTamu] = useState("");
+    const [jumlahTamu, setJumlahTamu] = useState("");
+    const [kehadiranTamu, setKehadiranTamu] = useState("No");
+
+    const handlePostComment = (name: string, comment: string, sesi: string, jumlahTamu: string, kehadiran:string) => {
+        const objParam = {
+            name: name,
+            comments: comment,
+            sesi: sesi,
+            jumlahTamu: jumlahTamu,
+            kehadiran: kehadiran,
+          };
+
+          addReqComment(
+            objParam.name,
+            objParam.comments,
+            objParam.sesi,
+            objParam.jumlahTamu,
+            objParam.kehadiran,
+            (res: { data: any }) => {
+              console.log("Results", res);
+              toast({
+                title: 'Comment sucessfully Added',
+                description: "We've added you comment, kindly refresh this page to view your comment",
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+            },
+            (error: any) => {
+              console.log("get posted err", error.message);
+              toast({
+                title: 'Oops! Something went Wrong',
+                description: "Currently we are unable to add your comment, try again latter",
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+              })
+            }
+          );
+    }
 
     return (
         <>
@@ -70,6 +115,7 @@ function Attendance({lang}: Props) {
                                 focusBorderColor='#483C32'
                                 placeholder='Name' 
                                 _placeholder={{ color: '#483C32' }}
+                                onChange={(e) => setNamaTamu(e.target.value)}
                             />
                         </GridItem>
                         <GridItem colSpan={{ base: 3, md: 1 , lg: 1 }}>
@@ -80,15 +126,16 @@ function Attendance({lang}: Props) {
                                     focusBorderColor='#483C32'
                                     placeholder='Session / Sesi'
                                     _placeholder={{ color: '#483C32' }}
+                                    onChange={(e) => setSesiTamu(e.target.value)}
                                     >
-                                  <option value='option1'>Session 1</option>
-                                  <option value='option2'>Session 2</option>
+                                  <option value='1'>Session 1</option>
+                                  <option value='2'>Session 2</option>
                                 </Select>
                             </Box>
                         </GridItem>
                         <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
                             <Flex bgColor={'rgba(250, 249, 246, 0.6)'} justify={'center'}>
-                                <RadioGroup defaultValue='No'>
+                                <RadioGroup defaultValue='No' >
                                   <Stack spacing={5} direction='row'>
                                   <Radio 
                                         value='Yes' 
@@ -100,6 +147,7 @@ function Attendance({lang}: Props) {
                                             color: '#F9F6EE',
                                             borderColor: '#F9F6EE',
                                         }}
+                                        onChange={(e) => setKehadiranTamu(e.target.value)}
                                     >
                                       Hadir (Yes)
                                     </Radio>
@@ -113,6 +161,7 @@ function Attendance({lang}: Props) {
                                             color: '#483C32',
                                             borderColor: '#F9F6EE',
                                         }}
+                                        onChange={(e) => setKehadiranTamu(e.target.value)}
                                     >
                                       Tidak Hadir (No)
                                     </Radio>
@@ -129,9 +178,10 @@ function Attendance({lang}: Props) {
                                     focusBorderColor='#483C32'
                                     placeholder='Jumlah Tamu (pax)'
                                     _placeholder={{ color: '#483C32' }}
+                                    onChange={(e) => setJumlahTamu(e.target.value)}
                                     >
-                                  <option value='option1'>1</option>
-                                  <option value='option2'>2</option>
+                                  <option value='1'>1</option>
+                                  <option value='2'>2</option>
                                 </Select>
                             </Box>
                         </GridItem>
@@ -143,6 +193,7 @@ function Attendance({lang}: Props) {
                                 bgColor={'rgba(250, 249, 246, 0.7)'} 
                                 focusBorderColor='#483C32'
                                 _placeholder={{ color: '#483C32' }}
+                                onChange={(e) => setCommentInput(e.target.value)}
                             />
                                 <HStack>
                                     <InfoOutlineIcon boxSize={'10px'} color="#483C32"/>
@@ -154,7 +205,14 @@ function Attendance({lang}: Props) {
                         </GridItem>
 
                     </Grid>
-                    <Button bgColor={"#F9F6EE"} variant='solid' alignItems='center' width='60%'>
+                    <Button 
+                        bgColor={"#F9F6EE"} variant='solid' alignItems='center' width='60%' 
+                        isDisabled={namaTamu && commentInput && sesiTamu && jumlahTamu && kehadiranTamu ? (false):(true)}
+                        onClick={(e) => {
+                            e.preventDefault(); 
+                            handlePostComment(namaTamu, commentInput, sesiTamu, jumlahTamu, kehadiranTamu);
+                        }}
+                    >
                         {lang == "id" ? ("Kirim"):("Submit")}
                     </Button>
                 </Stack>
