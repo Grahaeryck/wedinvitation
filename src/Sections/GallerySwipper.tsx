@@ -64,7 +64,7 @@ function GallerySwipper() {
               {GalleryData.map((item: any, index: number) => (
                 <SwiperSlide>
                   <Box 
-                    h={"100%"}
+                    h={{ base: "60%", md: "100%" , lg: "100%" }}
                     width={'100%'}
                     bgImage={item.imgSource}
                     bgSize="cover"

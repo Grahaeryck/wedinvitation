@@ -17,13 +17,9 @@ type Props = {
   };
   
   const activePage = {
-    //fontWeight: "500",
-    color: '#F9F6EE',
-    //backgroundColor: bgColor,
+    color: '#C19A6B',
     padding:"10px",
-    //borderRadius: "1px",
     textDecoration: "none",
-    // borderBottom: '0.2em solid #0672cb',
   };
 
 
@@ -56,7 +52,7 @@ type Props = {
           <Container
             maxW={"container.2xl"}
             px={["2rem", "2rem", "2rem", "2rem"]}
-            position={"absolute"}
+            position={"fixed"}
           >
             
             <Flex as="nav" p={{base: "6px", md: "8px" , lg: "10px"}} alignItems="center">

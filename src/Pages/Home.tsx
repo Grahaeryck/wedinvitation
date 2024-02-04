@@ -42,7 +42,7 @@ function WelcomePage({language, type}: Props) {
             {type == "ab" ? (''):(type=="AB" ? (''):(<Story lang={language}/>))}
             {/* <Gallery/> */}
             <GallerySwipper/>
-            <Gift lang={language}/>
+            <Gift lang={language} type={type}/>
             <Wishes lang={language}/>
             <Attendance lang={language}/>
         </>

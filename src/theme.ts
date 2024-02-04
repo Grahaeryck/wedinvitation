@@ -1,4 +1,7 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import '@fontsource-variable/dancing-script';
+import '@fontsource-variable/heebo';
+import '@fontsource/metal';
 
 //default color mode config
 export const config: ThemeConfig = {
@@ -10,9 +13,8 @@ export const config: ThemeConfig = {
 export const Theme = extendTheme({
   config,
   fonts: {
-    heading: `Sacramento`,
-    // body: "Roboto, sans-serif",
-    body: `'Ephesis', serif`
+    heading: `'Dancing Script Variable', sans-serif`,
+    body: `'Metal', sans-serif`,
   },
   colors: {
     black: "#000000",

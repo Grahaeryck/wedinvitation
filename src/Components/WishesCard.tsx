@@ -19,6 +19,12 @@ type Props = {
   comments: string;
 };
 function WishesCard({name,timeposted, comments }: Props) {    
+  const [commentIsExpand, setCommentIsExpand] = useState(false);
+
+  const expandHandler = () => {
+    setCommentIsExpand(commentIsExpand ? false : true);
+  }
+  
     return (
       <>
         <Flex 
@@ -35,7 +41,10 @@ function WishesCard({name,timeposted, comments }: Props) {
               <CardBody>
                 <Heading color={'#483C32'} size='md'>{name}</Heading>
                 <Text fontSize={{ base: "10px", md: "12px" , lg: "12px" }} color={'rgba(128, 139, 150, 0.7)'}>{timeposted}</Text>
-                <Text>{comments}</Text>
+                <Text noOfLines={commentIsExpand ? (undefined):(3)}>{comments}</Text>
+                <Button color={'#C19A6B'} variant='link' onClick={() => expandHandler()}>
+                  {commentIsExpand ? ("Show less"):("Read more")}
+                </Button>
               </CardBody>
             </Card>
         </Flex>

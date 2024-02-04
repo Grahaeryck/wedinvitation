@@ -268,7 +268,7 @@ function Events({lang}: Props) {
                               {lang == "id" ? (
                                 'Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir untuk memberikan doa restu kepada putra-putri kami.'
                               ):(
-                                "Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir untuk memberikan doa restu kepada putra-putri kami."
+                                "It is a joy and honor for us if you, Sir/Madam/Brother/Sister, would be pleased to grace us with your presence to bestow your blessings upon our sons and daughters."
                               )}
                             </Text>
 
@@ -282,7 +282,7 @@ function Events({lang}: Props) {
                               {lang == "id" ? (
                                 'Atas kehadiran dan doa restunya kami ucapkan terima kasih.'
                               ):(
-                                'Atas kehadiran dan doa restunya kami ucapkan terima kasih.'
+                                'We express our gratitude for your attendance and the blessing of your prayers.'
                               )}
                             </Text>
 

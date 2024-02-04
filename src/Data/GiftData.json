@@ -2,7 +2,7 @@
     {
         "id" : "1",
         "title" : "Bank Mandiri",
-        "receiver" : "Rr. Sandy Sitia Nur Annisa",
+        "receiver" : "Sandy Sitia Nur Annisa",
         "accountNO" : "1440018514312",
         "imgSource" : "https://hatiuntukbersandar.com/Image/thumbnails/tn_Mandiri.png"
         
@@ -18,8 +18,8 @@
     {
         "id" : "3",
         "title" : "Paypal",
-        "receiver" : "Muhammad Graha Eryck Pratama",
-        "accountNO" : "1160517707",
+        "receiver" : "Graha Eryck",
+        "accountNO" : "Paypal.Me/GrahaEryck",
         "imgSource" : "https://hatiuntukbersandar.com/Image/thumbnails/tn_PayPal.png"
         
     }

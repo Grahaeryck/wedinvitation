@@ -100,9 +100,9 @@ function Story({lang}: Props) {
                             
                         ):(
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
-                                Awal bulan November, Graha merasa nyaman dan ingin menjalin sebuah hubungan. Namun saat itu ia masih bimbang, 
-                                dan memilih untuk memendamnya terlebih dahulu. Hingga akhirnya pada bulan Desember, Graha mengajak untuk berjumpa kembali, 
-                                ia membulatkan tekad untuk menyatakan keseriusannya.
+                                At the dawn of November, Graha found comfort and aspired to forge a connection. However, at that moment, 
+                                uncertainty lingered, prompting Graha to choose to keep it concealed for the time being. Until finally, in the month of December, 
+                                Graha extended an invitation to reunite, resolving to express his earnest intentions.
                             </Text>
                         )}
                         
@@ -116,8 +116,8 @@ function Story({lang}: Props) {
                             </Text>
                         ):(
                             <Text align={'center'} fontSize={{ base: "15px", md: "18px" , lg: "18px" }}>
-                                Dan pada hari itu, 4 Desember 2022, menjadi tanggal yang istimewa bagi kami, 
-                                Itulah awal cerita kami.. Kami ingin terus merajut cerita indah bersama hingga akhir nanti 🤍
+                                And on that day, the 4th of December 2022, became a special date for us,
+                                That was the beginning of our story. We wish to continue weaving our beautiful tale together until the end 🤍
                             </Text>    
                         )}
                         

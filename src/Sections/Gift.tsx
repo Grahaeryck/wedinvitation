@@ -1,4 +1,4 @@
-import React, { UIEvent, useRef } from 'react';
+import React, { UIEvent, useRef, useEffect, useState } from 'react';
 import { useInViewport } from 'react-in-viewport';
 import {
   Box,
@@ -6,25 +6,26 @@ import {
   Heading,
   Stack,
   Image,
-  Divider,
   Text,
-  AbsoluteCenter,
   Tabs, 
   TabList, 
   TabPanels, 
   Tab, 
   TabPanel, 
-  Center,
   Grid,
   GridItem,
-  SlideFade
+  SlideFade,
+  Link
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney} from '@fortawesome/free-solid-svg-icons';
 import GiftData from "../Data/GiftData.json";
 
-type Props = {lang:string};
-function Gift({lang}: Props) {
+type Props = {
+  lang:string
+  type: string;
+};
+function Gift({lang, type}: Props) {
   const tabsEng = ["Mandiri", "BCA", "Paypal", "Address"]
   const tabsID = ["Mandiri", "BCA", "Paypal", "Alamat"]
 
@@ -95,6 +96,7 @@ function Gift({lang}: Props) {
                   )}
                 </TabList>
                 <TabPanels >
+                  
                   {GiftData.map((item: any, index: number) => (
                     <TabPanel key={item.id}>
                       <Flex  justify={'center'} align={'center'} direction={'column'}>
@@ -119,8 +121,40 @@ function Gift({lang}: Props) {
                           <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
                             <Flex direction={'column'} justify={'center'} align={'center'} h={{ base: "wrap", md: "100px" , lg: "150px" }}>
                               <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.title}</Text>
-                              <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.receiver}</Text>
-                              <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.accountNO}</Text>
+                              {item.title === "Bank Central Asia" ? (
+                                <>
+                                {type == "MM" || type == "mm" ? (
+                                  <>
+                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Hj. dr Etin Jumarili</Text>
+                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>1160559264</Text>
+                                  </>
+                                ):(
+                                  <>
+                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.receiver}</Text>
+                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.accountNO}</Text>
+                                  </>
+                                )}
+                                </>
+                              ):(
+                                <>
+                                  <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.receiver}</Text>
+                                </>
+                              )}
+                              
+                              {item.title === "Paypal" ? (
+                                <Link href='https://www.paypal.com/paypalme/GrahaEryck' bgGradient='linear(to-l, #00457C, #0079C1)' bgClip='text' fontStyle={'bold'} isExternal>
+                                  {item.accountNO}
+                                </Link>
+                              ):(
+                                <>
+                                  {item.title === "Bank Central Asia" ? (
+                                    ""
+                                  ):(
+                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.accountNO}</Text>
+                                  )}
+                                </>
+                              )}
+                              
                             </Flex>
                           </GridItem>
                         </Grid>
@@ -134,8 +168,9 @@ function Gift({lang}: Props) {
                           <Box height='wrap' width={'wrap'} mb={'10px'}>
                               <FontAwesomeIcon icon={faHouseChimney} size="lg" style={{color: "#483C32",}}/>
                           </Box>
-                          <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Rr. Sandy Sitia Nur Annisa</Text>
-                          <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"} align={'center'}>
+                          <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Sandy Annisa</Text>
+                          <Text fontSize={{ base: "12px", md: "14px" , lg: "16px" }}  as="i" color={"#483C32"}>+62 877 50350982</Text>
+                          <Text fontSize={{ base: "12px", md: "14px" , lg: "16px" }}  as="i" color={"#483C32"} align={'center'}>
                               OGA-3916. Puri Orchard Appartment. Jl. Lkr. Luar Barat No.Kav. 8, Rw. Buaya, Kecamatan Cengkareng, 
                               Kota Jakarta Barat, DKI Jakarta 11740
                           </Text>

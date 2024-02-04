@@ -78,9 +78,21 @@ function Wishes({lang}: Props) {
                                                 alignItems={'center'} 
                                                 justifyItems={'center'} 
                                                 overflowY={'scroll'} 
-                                                maxH={'400px'}
+                                                maxH={'60vh'}
                                                 direction={'column'}
                                                 mt={'2rem'}
+                                                sx={{
+                                                    '&::-webkit-scrollbar': {
+                                                        width: '8px',
+                                                        borderRadius: '4px',
+                                                        backgroundColor: `rgba(193, 154, 107, 0.3)`,
+                                        
+                                                    },
+                                                    '&::-webkit-scrollbar-thumb': {
+                                                        borderRadius: '4px',
+                                                        backgroundColor: `rgba(193, 154, 107, 0.8)`,
+                                                    },
+                                                  }}
                                             >
                                                 {commentsList.map((item: any, index: number) => (
                                                     <WishesCard
@@ -96,7 +108,6 @@ function Wishes({lang}: Props) {
                                             <Flex  
                                                 alignItems={'center'} 
                                                 justifyItems={'center'} 
-                                                
                                                 maxH={'400px'}
                                                 direction={'column'}
                                                 mt={'2rem'}
