@@ -10,11 +10,7 @@ import Gift from "../Sections/Gift";
 import Wishes from "../Sections/Wishes";
 import Attendance from "../Sections/Attendance";
 import GallerySwipper from '../Sections/GallerySwipper';
-
-import {
-  Text
-} from "@chakra-ui/react";
-
+import BannerAB from '../Sections/BannerAB';
 
 type Props = {
   language: string;
@@ -35,14 +31,14 @@ function WelcomePage({language, type}: Props) {
       console.log(invType);
     return (
         <>
-            <Banner lang={language}/>
+            
+            {type == "ab" || type=="AB" ? (<BannerAB lang={language}/>):(<Banner lang={language}/>)}
             <Doa lang={language}/>
             <GroomBride lang={language}/>
             <Events lang={language}/>
-            {type == "ab" ? (''):(type=="AB" ? (''):(<Story lang={language}/>))}
-            {/* <Gallery/> */}
+            {type == "ab" || type=="AB" ? (''):(<Story lang={language}/>)}
             <GallerySwipper/>
-            <Gift lang={language} type={type}/>
+            {type == "ab" || type=="AB" ? (''):(<Gift lang={language} type={type}/>)}
             <Wishes lang={language}/>
             <Attendance lang={language}/>
         </>

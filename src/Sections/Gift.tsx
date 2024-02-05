@@ -20,6 +20,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney} from '@fortawesome/free-solid-svg-icons';
 import GiftData from "../Data/GiftData.json";
+import GiftTabPanels from "../Components/GiftTabPanels";
 
 type Props = {
   lang:string
@@ -96,71 +97,21 @@ function Gift({lang, type}: Props) {
                   )}
                 </TabList>
                 <TabPanels >
+
+                  {type === "mm" || type === "MM" ? (
+                    <GiftTabPanels id={1} title={"Bank Mandiri"} receiver={"Etin Jumarili Amanar"} accountNO={"1120021581785"} imgSource={"https://hatiuntukbersandar.com/Image/thumbnails/tn_Mandiri.png"}/>
+                  ):(
+                    <GiftTabPanels id={1} title={"Bank Mandiri"} receiver={"Sandy Sitia Nur Annisa"} accountNO={"1440018514312"} imgSource={"https://hatiuntukbersandar.com/Image/thumbnails/tn_Mandiri.png"}/>
+                  )}
+
+                  {type === "mm" || type === "MM" ? (
+                    <GiftTabPanels id={2} title={"Bank Central Asia"} receiver={"Etin Jumarili Amanar"} accountNO={"1160559264"} imgSource={"https://hatiuntukbersandar.com/Image/thumbnails/tn_BCA.png"}/>
+                  ):(
+                    <GiftTabPanels id={2} title={"Bank Central Asia"} receiver={"Muhammad Graha Eryck Pratama"} accountNO={"1160517707"} imgSource={"https://hatiuntukbersandar.com/Image/thumbnails/tn_BCA.png"}/>
+                  )}
+
+                  <GiftTabPanels id={3} title={"Paypal"} receiver={"Graha Eryck"} accountNO={"Paypal.Me/GrahaEryck"} imgSource={"https://hatiuntukbersandar.com/Image/thumbnails/tn_PayPal.png"}/>
                   
-                  {GiftData.map((item: any, index: number) => (
-                    <TabPanel key={item.id}>
-                      <Flex  justify={'center'} align={'center'} direction={'column'}>
-                        <Grid
-                          minH='150px'
-                          templateColumns='repeat(3, 1fr)'
-                          gap={4}
-                        >
-                          <GridItem colSpan={{ base: 3, md: 1 , lg: 1 }}>
-                            <Flex direction={'column'} justify={'center'} align={'center'} h={{ base: "wrap", md: "100px" , lg: "150px" }}>
-                                <Image
-                                  w={'130px'}
-                                  h={{ base: "40px", md: "100px" , lg: "120px" }}
-                                  fit={{ base: "contain", md: "contain" , lg: "contain" }}
-                                  bgPosition={'center'}
-                                  align={'center'}
-                                  src={item.imgSource}
-                                  alt={item.title}
-                                />
-                            </Flex>
-                          </GridItem>
-                          <GridItem colSpan={{ base: 3, md: 2 , lg: 2 }}>
-                            <Flex direction={'column'} justify={'center'} align={'center'} h={{ base: "wrap", md: "100px" , lg: "150px" }}>
-                              <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.title}</Text>
-                              {item.title === "Bank Central Asia" ? (
-                                <>
-                                {type == "MM" || type == "mm" ? (
-                                  <>
-                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Hj. dr Etin Jumarili</Text>
-                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>1160559264</Text>
-                                  </>
-                                ):(
-                                  <>
-                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.receiver}</Text>
-                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.accountNO}</Text>
-                                  </>
-                                )}
-                                </>
-                              ):(
-                                <>
-                                  <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.receiver}</Text>
-                                </>
-                              )}
-                              
-                              {item.title === "Paypal" ? (
-                                <Link href='https://www.paypal.com/paypalme/GrahaEryck' bgGradient='linear(to-l, #00457C, #0079C1)' bgClip='text' fontStyle={'bold'} isExternal>
-                                  {item.accountNO}
-                                </Link>
-                              ):(
-                                <>
-                                  {item.title === "Bank Central Asia" ? (
-                                    ""
-                                  ):(
-                                    <Text fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>{item.accountNO}</Text>
-                                  )}
-                                </>
-                              )}
-                              
-                            </Flex>
-                          </GridItem>
-                        </Grid>
-                      </Flex>
-                    </TabPanel>
-                  ))}
 
                   <TabPanel key={'4'}>
                     <Flex justify={'center'} h='150px'>

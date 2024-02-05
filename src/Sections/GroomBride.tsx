@@ -56,11 +56,11 @@ function GroomBride({lang}: Props) {
                                 {lang == "id" ? 
                                 (
                                     <Text fontSize={{ base: "12px", md: "15px", lg: "18px" }} color={"#483C32"}>
-                                        Putri dari Bapak Ir. R. Notariawan & Ibu Patiningsih
+                                        Putri dari Bapak Ir. R. Notariawan & Ibu Pantiningsih
                                     </Text>
                                 ):(
                                     <Text fontSize={{ base: "12px", md: "15px", lg: "18px" }} color={"#483C32"}>
-                                        Daughter of Ir. R. Notariawan & Patiningsih 
+                                        Daughter of Ir. R. Notariawan & Pantiningsih 
                                     </Text>
                                 )}
                             </Stack>
@@ -87,11 +87,11 @@ function GroomBride({lang}: Props) {
                               {lang == "id" ? 
                                 (
                                     <Text fontSize={{ base: "12px", md: "15px", lg: "18px" }} color={"#483C32"}>
-                                        Putra pertama dari Bapak R. Ahmad Yani (alm) & Ibu dr. Etin Jumarilli Amanar
+                                        Putra pertama dari Bapak R. H. Ahmad Yani (alm) & Ibu dr. Hj. Etin Jumarilli Amanar
                                     </Text>
                                 ):(
                                     <Text fontSize={{ base: "12px", md: "15px", lg: "18px" }} color={"#483C32"}>
-                                        First born son of R. Ahmad Yani (alm) & dr. Etin Jumarilli Amanar
+                                        First born son of R. H. Ahmad Yani (alm) & dr. Hj. Etin Jumarilli Amanar
                                     </Text>
                                 )}
                             </Stack>
