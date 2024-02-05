@@ -17,7 +17,7 @@ import NewLanding from './Pages/NewLanding';
 import GallerySwipper from './Sections/GallerySwipper';
 import Events from './Sections/Events';
 import Wishes from './Sections/Wishes';
-
+import LinkGenerator from './Pages/LinkGenerator';
 export const App = () => (
   <>
     <Router>
@@ -31,6 +31,7 @@ export const App = () => (
           <Route path="/Galery" element={<GallerySwipper/>} />
           <Route path="/Event" element={<Events lang={'id'}/>} />
           <Route path="/Rsvp" element={<Wishes lang={'id'}/>} />
+          <Route path="/BuatUndangan" element={<LinkGenerator/>} />
           <Route path="*" element={<NewLanding />} />
         </Routes>
       </Frame>

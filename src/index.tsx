@@ -9,6 +9,10 @@ import BackgroundMusic from "./Components/BackgroundMusic";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+console.log = function(){};
+console.log = console.warn = console.error = () => {};
+
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={Theme}>
