@@ -14,7 +14,6 @@ import {
   GridItem,
   RadioGroup,
   Radio,
-  theme,
   useToast
 } from "@chakra-ui/react";
 import { 
@@ -94,7 +93,7 @@ function Attendance({lang}: Props) {
                         textColor={"#FAF9F6"}
                         fontSize={{ base: "30px", md: "35x" , lg: "40px" }}
                     >
-                        Rsvp
+                        RSVP
                     </Heading>
                     <Text 
                         as={'i'}
@@ -189,7 +188,7 @@ function Attendance({lang}: Props) {
                         <GridItem colSpan={3}> 
                         <Stack>
                             <Textarea 
-                                placeholder='Whishes / Ucapan atau Doa' 
+                                placeholder='Wishes / Ucapan atau Doa' 
                                 bgColor={'rgba(250, 249, 246, 0.7)'} 
                                 focusBorderColor='#483C32'
                                 _placeholder={{ color: '#483C32' }}

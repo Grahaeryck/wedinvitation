@@ -7,13 +7,17 @@ import {
   Stack,
   Text,
   AspectRatio,
-  Fade
+  Fade,
+  Button,
+  Image,
+  Link
 } from "@chakra-ui/react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import GalleryData from "../Data/GalleryData.json";
+import InstagramIcon from '../Asset/InstagramIcon.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -77,6 +81,40 @@ function GallerySwipper() {
               ))}
             </Swiper>
             <Flex justify={'center'} align={'center'} mt={'2rem'} mb={'6rem'} direction={'column'}>
+              
+              <Box>
+                <Link 
+                  href='https://bit.ly/SG-InstagramFilter' 
+                  isExternal
+                >
+                  <Button
+                    size='md'
+                    height='55px'
+                    width='200px'
+                    border='2px'
+                    color='#F9F6EE'
+                    // bgColor='#483C32'
+                    borderColor='#C19A6B'
+                    borderRadius='20px'
+                    bgGradient='linear(to-l, #833AB4, #C13584)'
+                    _hover={{ bgGradient:'linear(to-l, #5B51D8, #833AB4)'}}
+                  >
+                      <Flex gap='10px' align={'center'}>
+                          <Image
+                                boxSize={'26px'}
+                                objectFit='cover'
+                                src={InstagramIcon}
+                                justifyContent={'center'}
+                          />
+                          <Text mt={'3px'} fontSize={'20px'}>Story Filter</Text>
+                      </Flex>
+                  </Button>
+                </Link>
+              </Box>
+            
+
+
+              
               {/* <AspectRatio width={{ base: '320px', md: '600px' , lg: '900px' }} ratio={16 / 9}>
                 <iframe 
                     src="https://www.youtube.com/embed/wqcu0j3Wsys?si=RcWJIHck1OXAc5-v" 

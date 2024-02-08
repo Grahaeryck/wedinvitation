@@ -178,7 +178,10 @@ function Events({lang}: Props) {
                                     <CardHeader>
                                         <Flex justify='center' alignItems='center' flexWrap='wrap'>
                                             <Box>
-                                                <Heading fontSize={'25px'} as="i" color={"#FAF9F6"}>RESEPSI</Heading>
+                                                <Heading fontSize={'25px'} as="i" color={"#FAF9F6"}>
+                                                    {lang == "id" ? ("RESEPSI"):("RECEPTION")}
+                                                    
+                                                </Heading>
                                             </Box>
                                             <Divider borderColor={'#C19A6B'} orientation='horizontal'/>
                                         </Flex>

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import {useLocation} from "react-router-dom";
 import Banner from "../Sections/Banner";
+import BannerAB from '../Sections/BannerAB';
+import BannerMM from '../Sections/BannerMM';
 import Doa from "../Sections/Doa";
 import GroomBride from "../Sections/GroomBride";
 import Events from "../Sections/Events";
@@ -10,7 +12,8 @@ import Gift from "../Sections/Gift";
 import Wishes from "../Sections/Wishes";
 import Attendance from "../Sections/Attendance";
 import GallerySwipper from '../Sections/GallerySwipper';
-import BannerAB from '../Sections/BannerAB';
+
+
 
 type Props = {
   language: string;
@@ -32,7 +35,19 @@ function WelcomePage({language, type}: Props) {
     return (
         <>
             
-            {type == "ab" || type=="AB" ? (<BannerAB lang={language}/>):(<Banner lang={language}/>)}
+            {type == "ab" || type=="AB" ? 
+              (
+                <BannerAB lang={language}/>
+              ):(
+                <>
+                  {type == "MM" || type=="mm" ? 
+                    ( 
+                      <BannerMM lang={language}/>
+                    ):(
+                      <Banner lang={language}/>
+                  )}
+                </>
+              )}
             <Doa lang={language}/>
             <GroomBride lang={language}/>
             <Events lang={language}/>

@@ -18,6 +18,7 @@ import GallerySwipper from './Sections/GallerySwipper';
 import Events from './Sections/Events';
 import Wishes from './Sections/Wishes';
 import LinkGenerator from './Pages/LinkGenerator';
+import Attendance from './Sections/Attendance';
 export const App = () => (
   <>
     <Router>
@@ -30,7 +31,7 @@ export const App = () => (
           <Route path="/eng/Home" element={<Home language={'eng'} type={localStorage.getItem("Type")!.toString()}/>} /> */}
           <Route path="/Galery" element={<GallerySwipper/>} />
           <Route path="/Event" element={<Events lang={'id'}/>} />
-          <Route path="/Rsvp" element={<Wishes lang={'id'}/>} />
+          <Route path="/Rsvp" element={<Attendance lang={'id'}/>} />
           <Route path="/BuatUndangan" element={<LinkGenerator/>} />
           <Route path="*" element={<NewLanding />} />
         </Routes>

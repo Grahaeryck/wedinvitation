@@ -32,7 +32,7 @@ type Props = {
         },
         {
           path: "/Rsvp",
-          text: "Rsvp",
+          text: "RSVP",
         },
         {
           path: "/Event",

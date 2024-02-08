@@ -140,6 +140,7 @@ function NewLanding({}: Props) {
                                             fontSize={{ base: "25px", md: "30px" , lg: "35px" }} 
                                             as="h1"
                                             color={"#483C32"}
+                                            textAlign={'center'}
                                          >
                                             {guests}
                                          </Heading>
@@ -148,6 +149,7 @@ function NewLanding({}: Props) {
                                             fontSize={{ base: "25px", md: "30px" , lg: "35px" }} 
                                             as="h1" 
                                             color={"#483C32"}
+                                            textAlign={'center'}
                                          >
                                             {guests} & {partner}
                                          </Heading>
@@ -168,7 +170,6 @@ function NewLanding({}: Props) {
                                   borderRadius='20px'
                                   _hover={{ bgColor:'#F9F6EE'}}
                                   onClick={handleOpenENG}
-
                                 >
                                     <Flex gap='5px' align={'center'}>
                                         <Image

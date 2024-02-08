@@ -59,7 +59,7 @@ function Gift({lang, type}: Props) {
                 align={'center'}
               >
                 {lang == "id" ? (
-                  "Kehadiran dan doa restu anda di hari spesial kami merupakan hadiah terbaik bagi kami. Namun, apabila memberi adalah tanda cinta, kami akan menerima dengan senang hati. Silahkan untuk dapat cek detail dibawah ini."
+                  "Kehadiran dan doa restu anda di hari spesial kami merupakan hadiah terbaik bagi kami. Namun, apabila memberi adalah tanda cinta, kami akan menerima dengan senang hati. Silahkan untuk dapat cek detail di bawah ini."
         
                 ):(
                   "Your presence and blessings on our special day are the best gifts for us. However, if you wish to celebrate with a gift, please check the details below. Thank you."
@@ -131,9 +131,16 @@ function Gift({lang, type}: Props) {
                 </TabPanels>
               </Tabs>
             </Flex>
-            <Text mt={'2rem'} fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Terima Kasih.</Text>
-            <Text mt={'-0.5rem'} fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Kami yang berbahagia,</Text>
-            <Text mt={'-0.5rem'} fontSize={{ base: "18px", md: "20px" , lg: "25px" }}  as="i" color={"#C19A6B"}>Sandy & Graha</Text>
+            <Text mt={'2rem'} fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>
+              {lang == "id" ? ("Terima Kasih."):("Thank You")}
+            </Text>
+            {lang == "id" ? (
+              <Text mt={'-0.5rem'} fontSize={{ base: "14px", md: "16px" , lg: "18px" }}  as="i" color={"#483C32"}>Kami yang berbahagia,</Text>
+            ):(
+              "" // <>Show Nothing</> 
+            )}
+            
+            <Text mt={'-0.5rem'} fontSize={{ base: "22px", md: "25px" , lg: "28px" }}  as="i" color={"#C19A6B"}>Sandy & Graha</Text>
           </Stack>
         </Stack>
       </Flex>
